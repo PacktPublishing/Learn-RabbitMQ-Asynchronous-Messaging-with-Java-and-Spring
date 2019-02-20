@@ -1,0 +1,250 @@
+WEBVTT
+
+00:01.700 --> 00:08.120
+Now let's take a look at the messaging protocols in the marketplace.
+
+00:08.130 --> 00:15.690
+Let's first start by the basic properties the general observations of messaging protocols.
+
+00:15.690 --> 00:20.890
+So messaging protocols are designed with messaging in mind.
+
+00:21.270 --> 00:23.410
+Here is the emphasis on messaging.
+
+00:23.460 --> 00:30.690
+It's just because the messaging protocols are basically two ways of transferring messages in any form
+
+00:30.750 --> 00:37.490
+and any kind through the networks devices over the Internet and simply everywhere.
+
+00:39.200 --> 00:47.150
+So there are three of them which are like most widely use because there are basically hundreds of protocols
+
+00:47.150 --> 00:56.340
+out there that are known or unknown but three of them are most widely used and these three protocols
+
+00:56.340 --> 00:57.820
+are stomp.
+
+00:57.940 --> 01:02.260
+MQ T.T. and am Cupie.
+
+01:02.320 --> 01:11.770
+So let's get started with STOMP and what it has to offer so stump is basically simple text oriented
+
+01:11.770 --> 01:13.790
+messaging protocol.
+
+01:13.920 --> 01:21.830
+It is basically designed for exchanging simple text messages around and stom provides an inner operable
+
+01:21.830 --> 01:29.570
+format so the clients that use Tom can communicate with his message broker to provide easy and widespread
+
+01:29.570 --> 01:34.780
+messaging interoperability among many languages platforms and brokers.
+
+01:34.790 --> 01:41.750
+So what this basically says that you can simply use anywhere with a proper client implementation
+
+01:44.450 --> 01:48.110
+stomp is where it's simple and easy to implement.
+
+01:48.140 --> 01:57.450
+It is almost like the H.T. to be design in mind stump does not deal with concepts like queues and topics.
+
+01:57.490 --> 02:03.850
+It basically uses a sense semantic with a destination string for where in a message to deliver.
+
+02:03.880 --> 02:10.360
+So you don't have to deal with things like queues topics or exchange with calls with stamp.
+
+02:10.360 --> 02:16.240
+You can just simply use a sense semantic for any kind of string any kind of data that you want deliver
+
+02:16.510 --> 02:18.240
+to the other clients.
+
+02:18.340 --> 02:25.000
+So you just use a sense of and then you can just deliver your message to the destination part.
+
+02:25.000 --> 02:31.810
+However the receiver can implement their own cues topics and exchange implementations.
+
+02:31.810 --> 02:37.520
+So it's all up to you to decide on whatever you want to do with STOMP.
+
+02:37.540 --> 02:44.260
+You can either choose to use the basic way send semantic way with stop or you can't even implement your
+
+02:44.260 --> 02:51.390
+queue's topics and Xchange consumers of messages subscribe to these destinations.
+
+02:51.530 --> 02:59.060
+So it's basically like yours is sending a message to some destination and that destination is being
+
+02:59.060 --> 03:01.530
+subscribed by other clients of Stomp.
+
+03:01.550 --> 03:04.870
+So they can just received the message when it arrives.
+
+03:05.000 --> 03:08.530
+It is simple as that.
+
+03:08.740 --> 03:15.730
+For more information on stamp and how it works and how to implement it you can visit the stamped dot
+
+03:15.900 --> 03:19.390
+the top Daddy-O web page for more information.
+
+03:19.390 --> 03:32.920
+Next up is MQ T.T. MQ is basically the acronym for message queue telemetry transport MQ duty he is basically
+
+03:32.920 --> 03:36.490
+designed for machine to machine or Internet of Things.
+
+03:36.490 --> 03:42.740
+Connectivity protocol that was the main use case for the design of this protocol.
+
+03:44.280 --> 03:51.550
+MQ duty is highly standardized because it's being developed for like years until now and it is being
+
+03:51.550 --> 03:53.660
+backed by the industrial giants
+
+03:56.420 --> 04:00.840
+and futurity provides a simple push and subscribe messaging.
+
+04:00.870 --> 04:07.320
+So you just push a message and you just subscribe to the endpoint of that message and then you can just
+
+04:07.320 --> 04:09.460
+simply receive the message.
+
+04:09.540 --> 04:10.450
+Simple as that.
+
+04:12.680 --> 04:19.960
+MQ TS specifically designed for rissoles constraint devices and low bandwidth high latency networks
+
+04:19.960 --> 04:23.810
+such as dial up lines and satellite links.
+
+04:23.830 --> 04:30.970
+So what do we mean by that is you have a very old very resource constraint device that you want to connect
+
+04:30.970 --> 04:36.330
+to the Internet or just want to send some messages and maybe even receive them.
+
+04:36.610 --> 04:44.200
+So you can use MQ T.T. protocol because it's a very low bandwidth oriented technology so that you can
+
+04:44.200 --> 04:50.560
+just simply use message exchanges with other devices with that very old device of yours.
+
+04:51.790 --> 05:00.590
+MQ duty is a full featured enterprise messaging and we're lightweight ideal for mobile and IO t so behind
+
+05:00.590 --> 05:09.150
+its simplicity you can use any kind of DeWyze mostly for resource cost read all and low with the Wise's
+
+05:09.410 --> 05:17.000
+but it has the all the enterprise messaging capabilities and because it's very lightweight it is ideal
+
+05:17.000 --> 05:25.800
+for mobile and I wrote in other things communications so included is in the back since it's designed
+
+05:25.800 --> 05:29.750
+by the industry giants and being developed for years.
+
+05:29.760 --> 05:37.950
+It supports thousands of concurrent DeWyze connections so you can just plug a factory plug a whole industry
+
+05:38.070 --> 05:47.270
+with MQ and start communicating instantly MQ Tuti has some compact binary packets.
+
+05:47.270 --> 05:54.790
+So there are no message properties no matter data and all the headers with the message are compressed.
+
+05:55.100 --> 05:57.920
+That's basically where the light lightweight comes from.
+
+06:00.020 --> 06:08.540
+So the famous technologies of AWOS which is Io T and Greengrass which is the edge computing solution
+
+06:08.540 --> 06:16.130
+from Amazon are basically designed around MQ T.T. because of its simplicity and because it allows both
+
+06:16.130 --> 06:21.370
+old and new devices to be connected already MQ tity all together.
+
+06:22.390 --> 06:33.210
+So let's move on to AM Cupie which is our product all that we're going to focus on MQ is basically advents
+
+06:33.290 --> 06:34.750
+message protocol.
+
+06:34.760 --> 06:41.470
+This is the acronym and Cupie is highly reliable and interoperable.
+
+06:41.660 --> 06:42.940
+What do we mean by that.
+
+06:43.040 --> 06:53.270
+You can just use AMD Cupie in any environment from desktops to Mobile to IO t simply everything and
+
+06:53.340 --> 06:56.830
+Cupie solutions from different vendors does work.
+
+06:56.990 --> 06:59.290
+Which is where other protocols failed.
+
+06:59.300 --> 07:07.550
+So let's just think of an example right now some X company doing up a solution using Amcu protocol specifications
+
+07:07.820 --> 07:10.580
+and some other why Company developed.
+
+07:10.580 --> 07:14.170
+Also another implementation of AMD Cupie.
+
+07:14.630 --> 07:21.500
+So when we try to communicate these clients to follow up using x and y companies implementations it
+
+07:21.500 --> 07:23.360
+just simply works.
+
+07:23.360 --> 07:29.010
+This is the beauty of AMD Cupie and this gives you the idea WHY is so popular.
+
+07:29.820 --> 07:32.390
+So it is highly standardized of course.
+
+07:32.430 --> 07:39.420
+This is just the basic idea behind a protocol of course and it provides a wide range of features related
+
+07:39.420 --> 07:47.430
+to messaging it has reliable queuing topic Beys publish and subscribe messaging which almost under every
+
+07:47.620 --> 07:51.330
+protocol has it as flexible routing transaction.
+
+07:51.360 --> 07:54.330
+And of course security.
+
+07:54.350 --> 08:01.670
+So let's give an example to JPMorgan the giant financial company is processing billions of messages
+
+08:01.670 --> 08:06.450
+a day with AMD Cupie the number billions is the key here.
+
+08:06.740 --> 08:15.710
+And you can even go higher than this and in the Amcu B.S. We're going to discover much more about the
+
+08:15.890 --> 08:20.620
+AMD Cupie and the benefits and the architecture behind it.
+
+08:20.660 --> 08:22.100
+So I'll see on the next video.

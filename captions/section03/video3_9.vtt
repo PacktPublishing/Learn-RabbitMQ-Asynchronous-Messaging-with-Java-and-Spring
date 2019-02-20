@@ -1,0 +1,70 @@
+WEBVTT
+
+00:01.520 --> 00:08.890
+And next up we have topics topics are simply the subject part of the messages.
+
+00:09.190 --> 00:15.860
+The heading of the queue topics are defined as routing key for message Grubin.
+
+00:15.970 --> 00:21.620
+So with that routing key defined you can deliver your messages to proper cues and proper consumers.
+
+00:22.490 --> 00:31.100
+For routing key configuration there is a special formatting such as app that looks that error is a way
+
+00:31.100 --> 00:32.780
+of defining a topic.
+
+00:32.780 --> 00:35.500
+So you define your configuration as apt.
+
+00:35.550 --> 00:41.740
+Loxton error and you indicate that your topic is about application error logging.
+
+00:41.780 --> 00:42.730
+Simple as that.
+
+00:44.530 --> 00:48.660
+Of course there are optional parameters for message exchange.
+
+00:48.670 --> 00:55.150
+So while you're defining your topic you can have some optional parameters injected to your topic and
+
+00:55.150 --> 00:56.200
+queue definition.
+
+00:56.410 --> 00:59.860
+And we're definitely going to see that in the following lectures.
+
+01:01.070 --> 01:05.530
+You can send and receive messages without any topic information.
+
+01:05.720 --> 01:11.850
+So this is again the default exchange and default topic.
+
+01:11.900 --> 01:18.380
+You can simply send a message without indicating anything and your message is being delivered to default
+
+01:18.380 --> 01:21.740
+exchange and rabbit in queue with that default exchange.
+
+01:21.980 --> 01:25.360
+Then your message is being binded to default to that.
+
+01:25.370 --> 01:31.540
+With the full queue if the consumer is listening to that your consumer then can receive the message.
+
+01:31.550 --> 01:33.510
+Simple as that.
+
+01:33.860 --> 01:38.220
+Topic exchanges are defined using topics for message delivery.
+
+01:38.270 --> 01:42.060
+So this is the key concept from the default messaging.
+
+01:42.500 --> 01:46.110
+You have to define a topic to use a topic exchange.
+
+01:46.130 --> 01:49.580
+Otherwise there is no point in defining a topic exchange.

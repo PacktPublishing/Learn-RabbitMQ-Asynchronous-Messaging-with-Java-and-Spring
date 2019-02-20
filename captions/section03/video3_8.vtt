@@ -1,0 +1,106 @@
+WEBVTT
+
+00:01.690 --> 00:11.940
+Next up we have cue's CU's are a core element in any MQ protocol but especially for rabit MQ It is the
+
+00:11.940 --> 00:20.480
+foundational element in Rabbitte MQ messages are routed to cues from exchanges just as we talked earlier
+
+00:20.480 --> 00:21.450
+about this.
+
+00:21.590 --> 00:31.920
+Messages are being routed to cues from exchanges using the bindings cues are simply like final destinations
+
+00:31.920 --> 00:32.470
+and rabbit.
+
+00:32.490 --> 00:38.880
+Q Before being received by subscribers this is a very key point here because your consumer only knows
+
+00:38.880 --> 00:39.810
+about the cues.
+
+00:39.900 --> 00:42.660
+They don't know about the exchange or anything else.
+
+00:42.900 --> 00:48.810
+They configured their client regarding just queue configuration and then they receive their messages
+
+00:48.990 --> 00:50.180
+from Bocuse.
+
+00:51.460 --> 00:55.870
+Routing algorithms depends on the Xchange type and rules called bindings.
+
+00:56.170 --> 01:03.070
+Just as we saw with the Xchange example and exchange definitions bindings are very important in rabit.
+
+01:03.060 --> 01:10.530
+Q You have to properly bind your exchanges and Qs so that your consumers can receive messages properly.
+
+01:12.590 --> 01:17.610
+Bindings are again simply used to bind exchanges to queues for message delivery.
+
+01:17.630 --> 01:23.300
+I'm pointing this out again and again just because you need to learn this because this is a very important
+
+01:23.300 --> 01:30.770
+concept in rabbit MQ bindings are being done from exchanges to accuse.
+
+01:30.820 --> 01:34.120
+So there are a couple of properties of a queue.
+
+01:34.540 --> 01:37.150
+And let's start one by one.
+
+01:37.200 --> 01:42.360
+Of course AQ is going to have a name the name of the Q that you define.
+
+01:42.360 --> 01:46.500
+You can define simply anything for your Q As the name.
+
+01:46.500 --> 01:54.360
+And there is the durability and the variable for that is call as durable durable state shrub it is cute
+
+01:54.450 --> 01:57.810
+that it should either persist your cue to the disk or not.
+
+01:57.810 --> 02:00.740
+So this is another important concept in rabbit.
+
+02:00.760 --> 02:02.320
+Q.
+
+02:02.340 --> 02:06.210
+You can have durable cues for later message delivery.
+
+02:06.210 --> 02:10.020
+This is about like retry mechanisms and failover mechanisms.
+
+02:10.020 --> 02:15.600
+This is an important concept and we're definitely going to get there in our following lectures.
+
+02:15.600 --> 02:21.420
+Just don't worry about it right now but you should know that you can have durable cues in your Xchange
+
+02:22.900 --> 02:29.860
+and there is a property as exclusive as seclusive simply defines that if there are no items in the queue
+
+02:30.070 --> 02:35.060
+and the queue can simply be deleted by the system by the rabid MQ.
+
+02:35.530 --> 02:36.920
+This is the flag for it.
+
+02:38.850 --> 02:47.100
+And there is also a flag as auto dash delete and this flag indicates rabbit named that the queue can
+
+02:47.100 --> 02:51.210
+be deleted when there are no consumer subscriptions.
+
+02:51.300 --> 02:57.910
+So simply if there are no consumer subscribe to your queue down your queue can be deleted by Robert
+
+02:57.950 --> 02:59.700
+MQ itself the Broecker itself.

@@ -1,0 +1,133 @@
+WEBVTT
+
+00:03.180 --> 00:06.330
+Before we start off with our implementations we're rabbit.
+
+00:06.330 --> 00:14.580
+Q Let's take a closer look at other Qs and compare it to the performance and other factors of Rabbitte
+
+00:14.580 --> 00:14.720
+him.
+
+00:14.720 --> 00:22.210
+Q So in here we have a table of like the most popular and Qs out there.
+
+00:24.400 --> 00:27.460
+And let's start with a comparison of features.
+
+00:27.460 --> 00:31.040
+One by one considering him.
+
+00:31.040 --> 00:34.600
+Q Has a broker at the center at the heart.
+
+00:34.640 --> 00:39.130
+We have no here but in the case of 0 m q or I or him.
+
+00:39.140 --> 00:41.790
+Q And then Apache Kafka.
+
+00:41.990 --> 00:47.450
+They either use some distributed way of message brokers or maybe cloudbase Messrs.
+
+00:47.450 --> 00:51.770
+Brokers completely different architectures considering rabbit.
+
+00:51.780 --> 00:54.310
+Q So we have a broker in Radburn name.
+
+00:54.310 --> 00:57.320
+Q So we have a centralized way of communication.
+
+00:59.190 --> 01:07.290
+In the case of Clines as you can see almost all the queues have some clients for C C++ C Sharp Java
+
+01:07.350 --> 01:14.250
+and some other languages that you can define your Qs Xchange topics and everything and communicate with
+
+01:14.460 --> 01:18.920
+your MQ on the transaction perspective.
+
+01:19.070 --> 01:22.280
+Of course rabit MQ is supporting that.
+
+01:22.280 --> 01:23.850
+But in the case of zero.
+
+01:23.860 --> 01:27.870
+Q I renamed Q and Apache Kafka.
+
+01:28.040 --> 01:29.620
+You cannot simply do that.
+
+01:29.780 --> 01:39.220
+But for Apache Kafka of course you can have an implementation with an external plug in on the persistence
+
+01:39.220 --> 01:41.810
+perspective and reliability.
+
+01:41.950 --> 01:48.510
+You can configure your rabid MQ such as with the durable argument that we see with the key configuration.
+
+01:49.000 --> 01:52.690
+And of course you can configure rabid MQ extensively.
+
+01:52.690 --> 02:00.750
+Other than durable argument to be a persistence and reliable MQ in Afkham queue.
+
+02:00.830 --> 02:03.530
+We can also configure dat but with him.
+
+02:03.530 --> 02:13.080
+Q You have no persistence on the routing perspective as we saw with the public exchanges and audio routing
+
+02:13.080 --> 02:21.660
+configurations you can easily implement routing in rabid MQ but in the case of Iran Q And of course
+
+02:21.720 --> 02:25.230
+Apache Cupitt you don't have this option.
+
+02:25.230 --> 02:31.130
+You cannot use routeing because they'd simply use pops up kind of messaging.
+
+02:31.380 --> 02:39.840
+This is the architectural decision of them so they don't have this option on the failover and Hywel
+
+02:39.940 --> 02:41.190
+with the perspective.
+
+02:41.410 --> 02:42.010
+Robert M..
+
+02:42.010 --> 02:47.390
+Q of course is winning here again and in that case there's zero.
+
+02:47.400 --> 02:50.130
+Q Is the only missing part.
+
+02:50.130 --> 02:56.620
+It doesn't have the proper mechanisms for failover and high availability.
+
+02:56.790 --> 03:03.870
+And as you see with the most left part for our table with the rabid MQ properties you see that ráby
+
+03:03.870 --> 03:11.010
+named Q has a wide range of features and it supports things like failover high availability routing
+
+03:11.220 --> 03:17.270
+persistence transaction and lots of different clients by far.
+
+03:17.400 --> 03:23.820
+Rabid Q Is the best choice in the stable but of course it really depends on your task.
+
+03:23.820 --> 03:26.570
+It really depends on your work that you want to achieve.
+
+03:26.790 --> 03:36.250
+Because some things can be much more suitable for Apache Kafka or zero MQ or active MQ maybe but named
+
+03:36.260 --> 03:43.230
+Q In general has more than enough features that you can use and implement and satisfy your customers
+
+03:43.230 --> 03:44.590
+clients and everything.

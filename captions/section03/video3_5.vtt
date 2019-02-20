@@ -1,0 +1,211 @@
+WEBVTT
+
+00:02.160 --> 00:05.970
+Know it's time to meet Rabbitt them cute self.
+
+00:06.390 --> 00:14.310
+Let's start by the top of the line features of Rabbitt MQ and build on top of with the architectural
+
+00:14.580 --> 00:16.850
+appearance of the system itself.
+
+00:20.310 --> 00:20.810
+Rub it in.
+
+00:20.810 --> 00:28.480
+Q is a powerful open source message broker and also known as a message oriented middleware.
+
+00:30.270 --> 00:36.170
+Dewpoint of having a open source message broker is that is being built by the community itself.
+
+00:37.700 --> 00:42.810
+It is by far the most popular implementation of Amcu.
+
+00:43.220 --> 00:50.390
+When you check out the job listings and the online blogs for message queue implementations and questions
+
+00:50.390 --> 00:53.540
+and answers in blocks you'll see dead rabbit.
+
+00:53.540 --> 01:00.890
+MQ is the most popular implementation and by far you can find most of the examples of implementation
+
+01:00.890 --> 01:10.600
+ways of things in the message in ways rabid enqueue provides a robust and flexible messaging platform
+
+01:10.840 --> 01:18.820
+designed to inter operate with other messaging systems so you can plug and play and Cupie providers
+
+01:19.120 --> 01:20.790
+using rabbit in Q.
+
+01:20.800 --> 01:23.800
+This is one of the most powerful features of rabbit name.
+
+01:23.800 --> 01:31.840
+Q And as we saw with our previous examples you can simply plug different kinds of applications different
+
+01:31.840 --> 01:38.880
+language of applications with rabid MQ with its Broecker Rapidan.
+
+01:38.880 --> 01:46.510
+Q Is that all about using Erlang programming language so it Bellson its high throughput and low latency
+
+01:47.730 --> 01:48.370
+Erlang.
+
+01:48.450 --> 01:55.650
+If you don't know is a very powerful language and Robert MQ message Brooke where technology is built
+
+01:55.650 --> 01:56.960
+around it.
+
+01:57.120 --> 02:05.100
+So having the Amcu as the underlying technology and being built by Erlang rabbit MQ is a very powerful
+
+02:05.100 --> 02:14.770
+message Broecker rabbit MQ also supports clustering for whole tolerance and scalability so in case that
+
+02:14.800 --> 02:22.330
+you think a single rubbered MQ broker is not good for your business then you can simply cluster different
+
+02:22.330 --> 02:30.720
+rubbered MQ brokers and have a highly available and highly scalable system for your message processing.
+
+02:30.760 --> 02:36.800
+It's a very common use case when dealing with messaging systems and especially with rubidium.
+
+02:36.800 --> 02:42.370
+Q It is almost a best practice rabbit him.
+
+02:42.360 --> 02:51.260
+Q And with the help of its Amcu protocol defines Xchange queues and bindings between them.
+
+02:51.330 --> 02:58.380
+So these are pretty fundamental concepts all Rabbitte MQ and the cume mechanism behind it.
+
+02:58.440 --> 03:04.140
+We're of course going to talk much more about these technologies and the architectures behind these.
+
+03:04.150 --> 03:06.240
+So just hold on for a minute.
+
+03:08.660 --> 03:09.110
+Rub it in.
+
+03:09.110 --> 03:15.860
+Q allows multiple connection channels inside a just a single TCAP connection in order to remove the
+
+03:16.010 --> 03:21.640
+overhead of opening a large number of TCAP connections to the message broker.
+
+03:21.650 --> 03:29.470
+This is a huge advantage considering other message cream protocols by using a single TCAP connection
+
+03:30.040 --> 03:36.790
+you're not working hard on your network bandwidth and you're delegating the management of message processing
+
+03:37.150 --> 03:40.690
+to Rabbitte MQ and you're not thinking about the overhead
+
+03:43.710 --> 03:45.610
+Nola's take a look at the rabbit.
+
+03:45.650 --> 03:49.890
+Q From an architectural standpoint.
+
+03:49.890 --> 03:54.780
+So we of course have publishers to publish messages to our messaging.
+
+03:54.780 --> 03:57.840
+Q A rabbit named Q in the arcades.
+
+03:57.870 --> 04:03.050
+These publishers are simply publishing their messages to some exchange.
+
+04:03.210 --> 04:08.510
+It be a default exchange or some other exchange that they define.
+
+04:08.580 --> 04:12.750
+They just publish their messages inside it.
+
+04:12.900 --> 04:17.300
+There are default or your own defined exchange in Rabbitte name.
+
+04:17.300 --> 04:19.240
+Q And just don't worry about it.
+
+04:19.280 --> 04:20.540
+We're going to get there.
+
+04:22.080 --> 04:30.330
+And after data of course we have subscribers Dadar listening for those messages either with a specific
+
+04:30.330 --> 04:33.520
+topic or a specific keyword.
+
+04:33.700 --> 04:39.660
+They're just listening and maybe they're just not listening for some specific words they might be listening
+
+04:39.660 --> 04:42.170
+through everything.
+
+04:42.180 --> 04:49.660
+So in that case they received those messages from the cues of the message broker of rabbit.
+
+04:49.660 --> 04:57.020
+MQ the messages coming to the exchanges are being delivered to cues.
+
+04:57.020 --> 05:06.810
+Why using some kind of bindings these bindings are definers of exchange and queue connections.
+
+05:06.860 --> 05:13.490
+For example you define your exchange and bind it to some q using a binding.
+
+05:13.610 --> 05:19.610
+You can even bind the next change to multiple queues and make your messages transfer to multiple queues
+
+05:19.610 --> 05:28.570
+and being listened by multiple subscribers even for publishers exchange are the starting point and their
+
+05:28.570 --> 05:31.450
+messages are being published to exchange.
+
+05:31.840 --> 05:35.860
+And for the subscriber part they only care about the queues.
+
+05:36.100 --> 05:39.240
+The queues are the most important part for them.
+
+05:39.420 --> 05:47.250
+They listened to cues and they listened to the messages from publishers publish to exchange and then
+
+05:47.310 --> 05:51.400
+with the binding they received the messages from the queue itself.
+
+05:51.780 --> 05:53.820
+They don't know about the exchange.
+
+05:54.000 --> 05:57.200
+They just know about the queue because of the architecture of the rabbit.
+
+05:57.210 --> 05:57.570
+Q
+
+06:00.310 --> 06:08.980
+So this is a basic diagram of what's going on when you try to use Raben MQ or the general look general
+
+06:08.980 --> 06:16.750
+overview of things going on inside the MQ and from the publisher side and from the subscriber side roof
+
+06:16.750 --> 06:19.150
+Gorst going to dig deep into Rabbitte name.
+
+06:19.150 --> 06:23.200
+Q And publishers and subscribers in our applications.
+
+06:23.440 --> 06:30.010
+But for the starting point these are the fundamental actors in Rabbitte MQ world that you should know
+
+06:30.010 --> 06:30.470
+about.

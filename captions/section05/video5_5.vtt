@@ -1,0 +1,70 @@
+WEBVTT
+
+00:01.410 --> 00:07.390
+NOLA sequel look at how to create a final exchange with the builder methods.
+
+00:08.460 --> 00:20.580
+So I'll go down here again and I'm going to create a bean and using the cupie core and all say fanout
+
+00:21.280 --> 00:33.810
+exchange and inside the method I'm going to build a panel exchange using the Xchange builder.
+
+00:33.930 --> 00:44.330
+I'll say fana the exchange and I'll provide fan out test the exchange and we have a typo there was just
+
+00:44.340 --> 00:45.730
+fixed up for a moment.
+
+00:47.280 --> 00:56.520
+And we have internal durability auto delete delete ignore declared exceptions.
+
+00:56.610 --> 01:02.230
+And again with argument and with arguments as a map.
+
+01:02.310 --> 01:07.190
+So pretty much similar to the other Xchange definitions.
+
+01:07.260 --> 01:15.220
+The key point here is that you have to provide specific arguments for your specific exchanges.
+
+01:16.320 --> 01:23.680
+That is basically the only difference when creating exchanges programmatically.
+
+01:23.690 --> 01:33.190
+So let's say you want an auto delete exchange if you want it durable as false.
+
+01:33.400 --> 01:39.690
+And we want it internal and then we're simply going to build it just like that.
+
+01:41.660 --> 01:46.370
+Let's rerun our application and see if it's going to be created.
+
+01:49.130 --> 01:53.120
+Our application is starting up.
+
+01:53.370 --> 01:55.390
+And here we go.
+
+01:55.590 --> 01:56.950
+Let's check out the logs.
+
+01:57.090 --> 02:02.010
+And we should see that our final text exchange is created.
+
+02:02.400 --> 02:12.130
+Let's go back to dashboard and as we can see that our final text exchange is right here.
+
+02:12.350 --> 02:23.760
+Set the auto delete as true and internal as true since a durability is set to false just like this here.
+
+02:24.760 --> 02:27.850
+It's not displayed there.
+
+02:27.890 --> 02:29.360
+Simple as that.
+
+02:29.360 --> 02:35.900
+So creating a final exchange with the builder method is pretty straightforward.
+
+02:36.110 --> 02:37.340
+Just as we saw here.

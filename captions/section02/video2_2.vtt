@@ -1,0 +1,148 @@
+WEBVTT
+
+00:01.730 --> 00:04.220
+So let's start by installing Rabbie them.
+
+00:04.220 --> 00:07.730
+Q On Windows specifically Windows 10.
+
+00:07.880 --> 00:21.220
+So I'm opening up a browser window and from there I'm going to search for rabbit MQ.
+
+00:21.330 --> 00:29.220
+After that I'm going to the download section of the official website and from there I'm going to go
+
+00:29.220 --> 00:31.780
+to windows with installer.
+
+00:32.190 --> 00:34.460
+This is the easiest way to install rabbit.
+
+00:34.470 --> 00:35.720
+Q On Windows.
+
+00:35.820 --> 00:43.170
+So I'm picking any of them because they are both identical just different sources and I'm downloading
+
+00:43.170 --> 00:43.610
+it.
+
+00:46.210 --> 00:46.530
+OK.
+
+00:46.530 --> 00:53.800
+It is being downloaded and as you can see we have to install Erlang on our computer so that rubidium
+
+00:53.830 --> 00:55.230
+Q can read properly.
+
+00:55.260 --> 00:58.380
+Otherwise it just simply doesn't work.
+
+00:58.380 --> 01:05.640
+So to do that as we see the direction right here let's just go to download of Earthlink for windows
+
+01:06.600 --> 01:11.160
+and from there I'm just going to simply download Irwig
+
+01:14.420 --> 01:18.210
+and I'll pick the 64 bit version.
+
+01:21.740 --> 01:23.180
+All right.
+
+01:23.180 --> 01:29.930
+So what we should do now is we need to wait for download of the Earthling and then when you first install
+
+01:29.950 --> 01:30.610
+Erlang.
+
+01:30.800 --> 01:36.120
+And after that we will install rabit MQ itself.
+
+01:36.130 --> 01:37.080
+All right.
+
+01:37.180 --> 01:40.110
+Download our Erlang distribution is complete.
+
+01:40.390 --> 01:42.530
+So now let's install it.
+
+01:42.610 --> 01:43.570
+I'm going to hit run
+
+01:46.200 --> 01:48.430
+and select Yes.
+
+01:48.990 --> 01:57.810
+And from there I'm not picking anything and I'm going to go with the default installation and hit next.
+
+01:57.820 --> 01:58.630
+All right.
+
+01:58.720 --> 02:07.030
+It is being installed and it is prompting me to install C++ distribution and also install that because
+
+02:07.090 --> 02:14.610
+it's also a required component.
+
+02:14.620 --> 02:15.250
+All right.
+
+02:15.550 --> 02:17.500
+It's complete.
+
+02:17.500 --> 02:26.080
+So now our Erlang installation is going on.
+
+02:26.360 --> 02:27.280
+All right.
+
+02:27.500 --> 02:29.090
+Erlang is installed.
+
+02:29.120 --> 02:33.480
+Now let's close this and run the rabid MQ server installation.
+
+02:33.700 --> 02:44.130
+I'll hit Grun and select Yes and from there I'm going to install rabid MQ as a service which is the
+
+02:44.310 --> 02:51.630
+point of this installer so I'll just pick none and the default is selected right here as you can see.
+
+02:51.630 --> 02:53.190
+And I'm going to hit next.
+
+02:54.040 --> 02:54.880
+And install
+
+02:58.060 --> 03:05.300
+and on just going to allow every connection for Erlang to have the rabbit key working properly.
+
+03:05.320 --> 03:14.050
+So say allow access and again I'm going to do that for the distribution.
+
+03:14.170 --> 03:15.300
+And here we go.
+
+03:16.170 --> 03:16.800
+Rabbit.
+
+03:16.820 --> 03:19.510
+Q installation is now complete.
+
+03:21.660 --> 03:29.490
+To verify that if it's installed properly and working properly as a service I'll just go to search and
+
+03:29.880 --> 03:31.740
+look for services.
+
+03:35.170 --> 03:36.610
+And here we go.
+
+03:37.490 --> 03:44.710
+And in there I'm going to look for Ibidem Q And as you can see here a rabbit named Q is now running
+
+03:45.430 --> 03:49.180
+rabbit MQ server is running in Windows as a service.

@@ -1,0 +1,73 @@
+WEBVTT
+
+00:01.230 --> 00:06.690
+To instill rabid MQ on Mac OS Let's first search for rabbit MQ
+
+00:09.500 --> 00:11.300
+and into results.
+
+00:11.450 --> 00:16.750
+Let's just go to download and installation in the downloads section.
+
+00:16.910 --> 00:21.490
+Let's select the Mac OS and we have couple of options here.
+
+00:21.500 --> 00:23.100
+First one is homebrew.
+
+00:23.150 --> 00:27.230
+There are a standalone and the generic Unix.
+
+00:27.230 --> 00:29.080
+So the best option.
+
+00:29.210 --> 00:37.250
+You should also use and I recommend is the homebrew option while depending on the system that you have
+
+00:37.470 --> 00:42.390
+Hambro is the actually missing package manager for Mac OS.
+
+00:42.440 --> 00:47.240
+So let's take a look at the web page of homebrew to learn more about it.
+
+00:47.750 --> 00:54.380
+And as you can see it has the web page as Brue that SH The Homebrew.
+
+00:54.380 --> 00:58.980
+As I said the missing package manager for Mac OS to install it.
+
+00:59.060 --> 01:07.610
+All you have to do is just copy the script and run in your command line or a terminal in Mac OS and
+
+01:07.820 --> 01:11.220
+after finishing with the homebrew installation.
+
+01:11.570 --> 01:16.300
+Just go back to rabid MQ and follow the way with Brou.
+
+01:16.320 --> 01:23.840
+As for doing that since I already have homebrew in my machine I'll just open up a terminal window and
+
+01:23.840 --> 01:30.920
+I'll just follow the lines follow the guidelines from rabbit him Q So to do that all first update my
+
+01:30.920 --> 01:31.370
+brew
+
+01:36.550 --> 01:45.040
+and then I'm simply going to bruv install and rabid MQ
+
+01:50.880 --> 01:57.550
+and rabbit MQ is being downloaded and installed.
+
+01:57.990 --> 01:59.750
+All right I'll rub it in.
+
+01:59.750 --> 02:03.330
+Q. installation on Mac OS is now complete.
+
+02:03.380 --> 02:10.690
+So to check out Raben MQ management UI and to start with rabid MQ command line interface.
+
+02:10.850 --> 02:12.680
+I'll be seeing you on the next with is.

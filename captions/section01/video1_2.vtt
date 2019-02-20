@@ -1,0 +1,97 @@
+WEBVTT
+
+00:01.990 --> 00:05.290
+Now let's talk about what we're going to cover in this course
+
+00:08.450 --> 00:16.490
+and this scores we're going to start by the way basic the fundamental model which for any message broker
+
+00:17.750 --> 00:19.410
+and that is messaging.
+
+00:19.760 --> 00:26.810
+So we're going to start by what the messaging means in software world and why we actually need it.
+
+00:28.760 --> 00:34.460
+And after that we're going to take a look at messaging protocols such as MQ T.T.
+
+00:37.860 --> 00:44.790
+after we finish with the protocols we're going to take a closer look at the AMD Cupie a synchronous
+
+00:44.790 --> 00:49.340
+message queuing protocol.
+
+00:49.450 --> 00:53.790
+And finally we're going to meet wet rabbit.
+
+00:53.790 --> 01:04.590
+Q The popular message queuing protocol for almost any environment that we have and after we first met
+
+01:04.620 --> 01:14.740
+with Rabbitt MQ we're going to start with cue's topics exchange and more we're going to learn the fundamental
+
+01:14.740 --> 01:16.390
+concepts of rubidium.
+
+01:17.020 --> 01:20.750
+And these are were important topics in the scores.
+
+01:20.950 --> 01:22.440
+I can't stress this enough.
+
+01:22.450 --> 01:29.410
+So make sure to study these sections very well because we're going to use that information throughout
+
+01:29.410 --> 01:30.190
+the course.
+
+01:32.120 --> 01:39.290
+After we learn the fundamentals of rabbit him Q and messaging we're going to take a comparison of message
+
+01:39.290 --> 01:49.730
+queueing frameworks and applications such as Kafka kümmel rabbit MQ Actium Q and more.
+
+01:49.900 --> 01:58.120
+After we finish our discussions about exchanges cue's bindings and much more we're going to start implementing
+
+01:58.420 --> 02:08.700
+rabbit MQ with our code using of course Jawa and springe we will learn how to use rabbit template for
+
+02:08.700 --> 02:12.700
+sending both simple and complex messages.
+
+02:13.050 --> 02:16.480
+I'll be showing you all the ways of using rabbit.
+
+02:16.770 --> 02:24.200
+And just wait up for that after we learn how to send messages with rabit template.
+
+02:24.490 --> 02:32.440
+We're going to move forward with our implementations such as configuring Qs exchanges bindings and much
+
+02:32.440 --> 02:33.810
+more from code.
+
+02:34.120 --> 02:41.230
+We're going to be implementing listeners and many other constructs of rabbit named Q so that we can
+
+02:41.230 --> 02:44.780
+use it in our both professional and personal projects.
+
+02:47.700 --> 02:54.720
+After learning how to configure queues ex-Rangers bindings and much more we're going to realize an asynchronous
+
+02:54.720 --> 03:00.060
+scenario with two different applications from one application.
+
+03:00.060 --> 03:08.590
+We're going to be publishing a message to a specific routing key and an Xchange from the other application.
+
+03:08.670 --> 03:13.210
+We're going to be receiving that message and processing it.
+
+03:13.400 --> 03:18.270
+It's going to be a very useful exercise and I'll be expecting to see you there.
+
+03:21.800 --> 03:26.110
+So without further ado I'll be seeing you on the next section.

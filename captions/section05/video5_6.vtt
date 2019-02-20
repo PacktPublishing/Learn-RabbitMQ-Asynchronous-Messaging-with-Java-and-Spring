@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.280 --> 00:07.460
+Nola's take a look at how we can create a header's exchange using the builder methods.
+
+00:08.230 --> 00:12.030
+So I'll go down again and our creative team.
+
+00:12.310 --> 00:20.710
+And with that being I'm going to say I want an exchange and this is going to be header's exchange
+
+00:24.790 --> 00:27.670
+an insight that header's exchange.
+
+00:27.670 --> 00:38.200
+I'm going to use the Xchange builder and I'll say header's exchange so as to name I'm going to say header's
+
+00:38.200 --> 00:38.860
+exchange
+
+00:42.970 --> 00:51.280
+and I can of course say header's test the exchange and then as we saw with the previous Xchange types
+
+00:51.670 --> 00:57.910
+the arguments are the builder method arguments are pretty simple because they're all extending from
+
+00:57.910 --> 00:59.240
+the same builder.
+
+00:59.710 --> 01:07.540
+We have internal we have durability auto delete delayed ignored declaration exceptions with arguments
+
+01:07.540 --> 01:12.730
+and with arguments as a map just like that.
+
+01:12.820 --> 01:17.000
+So let's say it is internal It is also durable
+
+01:19.500 --> 01:28.280
+and we can say ignore declaration exceptions and just be all that.
+
+01:28.310 --> 01:37.840
+So let's rerun our application to see created.
+
+01:38.070 --> 01:41.910
+It's about to start.
+
+01:42.040 --> 01:43.800
+And here we go.
+
+01:44.180 --> 01:51.350
+If you again check our logs we can see that are hundreds of exchanges created.
+
+01:51.460 --> 02:02.170
+And let's go to our rabbit MQ dashboard and in the exchanges we can definitely see that our headers
+
+02:02.170 --> 02:11.200
+test exchange is created as the type headers with the durability and the internal arguments set as true.
+
+02:11.290 --> 02:19.090
+And if we go inside it we can just simply verify that the arguments that we provided within the method
+
+02:19.510 --> 02:23.860
+is used when we create our Xchange in rabid MQ.

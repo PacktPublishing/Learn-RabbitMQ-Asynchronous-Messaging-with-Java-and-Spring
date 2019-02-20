@@ -1,0 +1,163 @@
+WEBVTT
+
+00:01.720 --> 00:08.000
+How about creating Xchange is from code to take a closer look at it.
+
+00:08.050 --> 00:17.710
+Let's create another configuration class and declare our exchanges and for the naming purposes I'll
+
+00:17.710 --> 00:19.900
+say rabbit.
+
+00:19.900 --> 00:25.260
+MQ Xchange configuration.
+
+00:25.390 --> 00:26.440
+Here we go.
+
+00:26.630 --> 00:32.320
+And again I'm going to annotate my class as configuration.
+
+00:32.320 --> 00:33.040
+All right.
+
+00:34.440 --> 00:40.070
+We already know a way to create exchanges in rabbit Q Using Java and spraying.
+
+00:40.320 --> 00:43.450
+And let's try that again.
+
+00:44.400 --> 00:52.460
+We are creating a bean for our exchange and we're simply implementing the Xchange interface from AM
+
+00:52.590 --> 00:56.260
+Cupie core and for the method name.
+
+00:56.820 --> 00:59.660
+And again it's irrelevant for our purpose.
+
+00:59.760 --> 01:01.590
+We can provide anything.
+
+01:01.920 --> 01:06.120
+And again I'm going to provide the example exchange.
+
+01:06.810 --> 01:07.510
+All right.
+
+01:10.720 --> 01:18.820
+Now for the exchange creation remember that we created a new exchange and simply returned it.
+
+01:18.820 --> 01:29.650
+So for this purpose for the Xchange creation remember that the exchange is an interface so we can't
+
+01:29.650 --> 01:32.980
+just initialize or create a new instance of it.
+
+01:33.220 --> 01:36.140
+So we have to pick the exchange.
+
+01:36.160 --> 01:44.830
+We have to pick the actual exchange implementation as being the topic exchange maybe maybe direct exchange
+
+01:45.020 --> 01:47.430
+and out exchange and so on.
+
+01:48.130 --> 01:59.010
+So again we can create topic exchange maybe and 4-D arguments we can just say example exchange
+
+02:04.320 --> 02:06.210
+just like that.
+
+02:06.380 --> 02:11.560
+And this was how we created our exchanges before.
+
+02:11.660 --> 02:15.410
+How about another way of creating exchanges.
+
+02:15.410 --> 02:22.040
+We have again an exchange builder class to create exchanges highly clear through way.
+
+02:22.340 --> 02:26.050
+So let's ride it out again.
+
+02:26.300 --> 02:33.430
+I'm creating a bean for my Xchange definition just as we did with cue's the cube builder.
+
+02:33.770 --> 02:43.510
+And I'm saying I want an exchange and this Xchange is going to be example.
+
+02:43.850 --> 02:45.140
+Second the exchange
+
+02:48.980 --> 02:55.720
+and inside the method I'm going to be creating my Xchange with the builder methods.
+
+02:55.910 --> 03:08.300
+So let's return Xchange builder from an Cupie core again and I want a direct exchange.
+
+03:08.930 --> 03:21.430
+And as the name I'm going to pro-white example seconder exchange and let's just capitalized name all
+
+03:21.540 --> 03:29.940
+right and then I'm going to say also do eat internal maybe.
+
+03:30.370 --> 03:41.200
+And I can of course provide arguments I can Pictet durability I can say ignore declaration exemptions
+
+03:41.590 --> 03:46.100
+and so on just like you see with the builder matters right here.
+
+03:46.540 --> 03:53.860
+And when I'm gone configuring my Xchange I can simply call the Builth method and I'm fine.
+
+03:55.060 --> 04:03.340
+That's it so now let's rerun our application and see what's going to happen.
+
+04:07.290 --> 04:09.060
+Our application is starting up
+
+04:11.670 --> 04:13.380
+and here we go.
+
+04:14.120 --> 04:18.770
+When we check out our logs we can see that we have an example.
+
+04:18.810 --> 04:28.920
+Second exchange created for us and let's go back to our Rabbitt MQ dashboard and see our exchanges there.
+
+04:31.860 --> 04:41.580
+Here we go we have our example exchange and we of course have our example secondo exchange just like
+
+04:41.580 --> 04:43.670
+we declare in our code.
+
+04:43.860 --> 04:45.540
+Right.
+
+04:45.720 --> 04:55.530
+And if we go back to our exchanges the example exchange is a topic exchange since we returned a new
+
+04:55.530 --> 05:03.650
+topic exchange and for the second exchange we have to be expecting a direct exchange with auto delete
+
+05:03.880 --> 05:04.780
+internal.
+
+05:04.940 --> 05:15.920
+And as to name example second exchange in our exchanges if we go to our example second exchange it is
+
+05:15.920 --> 05:18.330
+a direct exchange.
+
+05:18.380 --> 05:19.530
+It is durable.
+
+05:19.640 --> 05:25.880
+It is all to delete and of course it is internal Just like that.
+
+05:26.190 --> 05:35.340
+So these are how you can create exchanges with rabbit in Q In our next video we're going to be seeing
+
+05:35.450 --> 05:41.180
+halti configure topic exchanges fanout and headers exchanges.

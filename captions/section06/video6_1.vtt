@@ -1,0 +1,82 @@
+WEBVTT
+
+00:01.680 --> 00:07.270
+All right I really were coming to an end of a great Chrebet game.
+
+00:07.280 --> 00:11.130
+Q With spring in Chow of course.
+
+00:11.130 --> 00:17.610
+So now let's recap what we learned in this course and this course.
+
+00:17.760 --> 00:26.190
+We started by learning what is messaging and we realized that messaging is all around us in our daily
+
+00:26.190 --> 00:34.200
+lives in our work lives and especially in our applications that we develop.
+
+00:34.280 --> 00:43.210
+And after that we went back in the messaging systems and tried to understand the motivation behind messaging
+
+00:44.830 --> 00:51.570
+and after we finish with messaging we tried to understand and discovered the protocols for messaging
+
+00:53.960 --> 01:02.390
+and then we started jumping right into AM Cupie and what is sols for us in our applications in software
+
+01:02.390 --> 01:05.440
+systems.
+
+01:05.660 --> 01:14.030
+We don't of course moved down to rabbit MQ which is running on top of Cupie and we learned that rabid
+
+01:14.030 --> 01:19.270
+MQ is a full featured enterprise great message cream product.
+
+01:21.480 --> 01:25.920
+We then started publishing messages and discovering rabit them.
+
+01:25.920 --> 01:34.680
+Q In that we learned how to use Rabbitt template with spring and started publishing messages both from
+
+01:34.680 --> 01:37.620
+dashboard and client application.
+
+01:39.070 --> 01:46.300
+After we've finished publishing our messages we've learned how to create cue's exchanges and binding
+
+01:46.300 --> 01:53.260
+between the both programmatically and from the rabid MQ management dashboard.
+
+01:55.100 --> 02:03.050
+Again we was both dashboard and code to implement our configurations and that was were important and
+
+02:03.050 --> 02:10.370
+very useful I think and I think you can use that information in your personal projects in your professional
+
+02:10.370 --> 02:12.740
+projects and simply everywhere.
+
+02:13.970 --> 02:20.750
+Those are the key informations for implementing Xchange is cues and bindings between them.
+
+02:20.870 --> 02:21.940
+With Robert M..
+
+02:21.940 --> 02:31.350
+Q And finally we realize an asynchronous communication scenario using two different applications from
+
+02:31.350 --> 02:32.620
+one application.
+
+02:32.790 --> 02:41.040
+We published a message to an exchange with the routing key and from another application we provided
+
+02:41.070 --> 02:47.170
+a message listener and we caught the message that we publish from the Adler application.
+
+02:49.510 --> 02:51.950
+This is a particularly useful scenario.
+
+02:52.030 --> 02:58.780
+I think good example for how to implement a synchronous and loosely coupled software architectures.

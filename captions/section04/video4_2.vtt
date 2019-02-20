@@ -1,0 +1,550 @@
+WEBVTT
+
+00:02.130 --> 00:09.740
+Know it's time that we learn how to work with rabid MQ and develop applications with it to do that in
+
+00:09.740 --> 00:15.800
+this section we're going to start by how to learn using Rabbitt template with spraying.
+
+00:16.100 --> 00:25.500
+So to start with I'm going to create a new project with intelligent and of course I'm going to use Spring
+
+00:25.500 --> 00:34.980
+initialiser and I'll hit next and from there I'm going to say com dot rabbit.
+
+00:34.990 --> 00:44.380
+Q And my artifact is going to be like rabbit MQ D-Mo..
+
+00:45.130 --> 00:46.320
+All right.
+
+00:47.140 --> 00:56.320
+And I'm going to leave everything as is and I'll hit next and from the dependency section I'll go right
+
+00:56.320 --> 01:00.780
+to do messaging part and all select rabit MQ.
+
+01:01.000 --> 01:02.190
+Simple as that.
+
+01:02.650 --> 01:04.300
+And then I'm going to hit next.
+
+01:04.300 --> 01:10.380
+Again and I'm going to hit finish here we go.
+
+01:10.460 --> 01:19.120
+Our project is now being created by intelligent and our dependencies are being resolved by the ID.
+
+01:19.140 --> 01:21.860
+And let's talk about them for a moment.
+
+01:22.350 --> 01:29.640
+When we go to our palmtop XML file we're seeing that we have the springboards partner parent project
+
+01:29.850 --> 01:33.350
+as the parent of our palm Dodik smell.
+
+01:33.690 --> 01:39.710
+And after that we have our dependencies and we have the AM Cupie dependency.
+
+01:39.810 --> 01:43.170
+Just like you see here.
+
+01:43.380 --> 01:44.670
+All right.
+
+01:44.670 --> 01:51.480
+Our project is now being resolved by our ID and we can start working on our Rabbitte template.
+
+01:51.960 --> 02:03.670
+So let's go to our source directory and open our main application Java class in our class.
+
+02:03.670 --> 02:08.370
+We're going to do several things to make use of Rabbitte template.
+
+02:08.590 --> 02:14.980
+We're of course going to use an auto water dependency of Rabbitte template so to do that.
+
+02:15.100 --> 02:26.290
+I'll just go blow here and I'll say private and Rabbitt template just like that.
+
+02:26.760 --> 02:32.180
+And of course I'm going to order wire it so I can use it in my code.
+
+02:32.190 --> 02:33.030
+Here we go.
+
+02:34.380 --> 02:36.310
+Let's get rid of that notification.
+
+02:36.360 --> 02:41.920
+And all right to actually make use of Rabbitte template.
+
+02:41.920 --> 02:49.340
+I'm going to have to implement a command line runner so I can run my code when my application launches.
+
+02:49.630 --> 03:02.880
+So to do that I'm going to go here to my class definition and implement command line runner.
+
+03:03.260 --> 03:04.180
+Here we go.
+
+03:04.490 --> 03:07.610
+And my idea is warning me against that.
+
+03:07.610 --> 03:11.950
+I have to implement the run method coming out of command line runner.
+
+03:12.230 --> 03:22.340
+So to do that all can click here or I can click and control and in Mac OS so I can hit implement that.
+
+03:22.520 --> 03:25.520
+And also like run and all that.
+
+03:25.520 --> 03:27.500
+OK here we go.
+
+03:27.860 --> 03:33.160
+We have our ID to run method coming out of command line runner.
+
+03:33.210 --> 03:38.390
+So let's see how we can use Rabbitt template now.
+
+03:38.550 --> 03:47.620
+So I'm going to say Rabbitt template and let's see what methods we're going to get wet rabbit template.
+
+03:48.000 --> 03:54.790
+And as you can see we have a bunch of methods starting with Colewort and sent and overridden methods.
+
+03:55.630 --> 04:02.260
+And as you can see we have also Colewort send and receive.
+
+04:02.490 --> 04:10.890
+And this is a very long list of methods from Rabbitte template we have ways to get exchanges routing
+
+04:10.890 --> 04:11.760
+keys.
+
+04:11.760 --> 04:13.790
+We can write handlers.
+
+04:13.860 --> 04:18.180
+We can just simply receive messages from queues and exchanges.
+
+04:18.180 --> 04:24.320
+We have simply unlimited lists of ways to implement our code red rabbit template.
+
+04:24.630 --> 04:31.140
+But for the sake of our territorial for this section especially I'm going to use convert and sound method
+
+04:31.290 --> 04:39.990
+of Rabbitte template it is the simplest way to exchange messages with rabbit MQ Broecker so to do that
+
+04:40.470 --> 04:44.330
+I'm going to say convert and send.
+
+04:44.700 --> 04:52.490
+And the basic the most simple way to send messages to rabid MQ is by using an object.
+
+04:52.680 --> 05:00.150
+And I should note here something about rabid MQ and especially about Rabbitte template Rabbitt template
+
+05:00.210 --> 05:03.630
+allows us to send any kind of messages to rabit them.
+
+05:03.630 --> 05:12.330
+Q It or be it a simple string message or a whole object containing fields subfields properties and everything
+
+05:12.720 --> 05:19.170
+and maybe even a large file like an empty tree you file an image file or a movie file.
+
+05:19.170 --> 05:26.070
+Maybe you can simply send and receive anything with rabbit in Q and you can send them and receive them
+
+05:26.070 --> 05:27.840
+with Rabbitte template of course.
+
+05:29.690 --> 05:38.120
+So to send our message Rabbitt template with the simplest way I'm going to use the object way and I'm
+
+05:38.120 --> 05:43.970
+going to hit enter now and I'm simply going to provide a message to Rabbitt them.
+
+05:43.990 --> 05:54.530
+Q And I'll say hello from our first message.
+
+05:54.620 --> 05:55.330
+Here we go.
+
+05:56.910 --> 05:58.060
+All right.
+
+05:58.290 --> 06:03.390
+Our message is now ready to be delivered to rabid MQ.
+
+06:03.830 --> 06:06.970
+Let's run our project and see what's going to happen.
+
+06:14.630 --> 06:21.680
+Our project is starting up now and let's make it a little bit bigger so we can see everything clearly
+
+06:22.340 --> 06:29.560
+and our application is up and we can see that our message is delivered to rabid.
+
+06:29.570 --> 06:37.130
+Q How can we say that we can simply say that our connection is being made to our broker.
+
+06:37.220 --> 06:45.280
+As you can see with this line here if it failed to connect to our rabid MQ broker it will simply say
+
+06:45.460 --> 06:53.620
+that it could not connect to our rabid MQ at the predefined part and host.
+
+06:53.820 --> 06:59.790
+And as you just saw here we didn't define anything in our application properties or anywhere.
+
+06:59.970 --> 07:05.910
+We just simply use a default binding Stiefel ports and halts configuration for rabbit MQ in our souping
+
+07:05.910 --> 07:06.730
+application.
+
+07:06.900 --> 07:10.400
+And we just started developing our application right away.
+
+07:10.410 --> 07:16.260
+Simple as that you don't have to define a specific port or Hos. for them.
+
+07:16.260 --> 07:24.860
+Q If you installed your rabid MQ in your machine or in your environment you can simply send your messages
+
+07:25.010 --> 07:34.850
+using the default binding which is at the 5 6 7 2 or maybe 1 5 6 7 2 which are the default ports for
+
+07:34.860 --> 07:37.700
+rabit MQ.
+
+07:37.720 --> 07:38.770
+All right.
+
+07:38.770 --> 07:44.230
+Let's see if our message is being delivered to our broker to check that out.
+
+07:44.260 --> 07:45.700
+I'm going to open up chrome
+
+07:48.860 --> 07:51.840
+and we have our rabbit named Q dashboard.
+
+07:51.890 --> 07:53.610
+Let's go to overview.
+
+07:56.080 --> 07:57.410
+From our overview.
+
+07:57.520 --> 07:59.740
+Let's go to our exchanges.
+
+08:00.960 --> 08:07.560
+And of course since we didn't provide anything in your routing key any queue configuration any binding
+
+08:08.130 --> 08:13.350
+our messages just simply delivered to our default am Cupie.
+
+08:13.600 --> 08:21.840
+And as you can see we have a spike right here which is just around the time that we sent our messages.
+
+08:22.030 --> 08:29.560
+And if we tried to check this message out we simply can't because we simply don't have any bindings
+
+08:29.920 --> 08:31.840
+to this default Xchange in rabidity.
+
+08:31.840 --> 08:40.820
+Q And if we go over to this information provided to us by rabit MQ dashboard it says did the full exchange
+
+08:40.840 --> 08:45.870
+as implicitly bound to every q with a routing key equal to the q name.
+
+08:46.210 --> 08:52.020
+It is not possible to explicitly bind to or unbind from the default exchange.
+
+08:52.060 --> 08:54.230
+It also cannot be delete it.
+
+08:54.580 --> 09:01.000
+So it simply says our message is routed to all the queues in our rabbit name.
+
+09:01.000 --> 09:10.560
+Q A message coming to the default Xchange as it states here routed to all the queues in rabbit cute
+
+09:10.680 --> 09:15.490
+with the routing key equal to the queue name.
+
+09:15.570 --> 09:22.890
+So if we go to our queues and try to see what we have there we have our test queue that we created in
+
+09:22.890 --> 09:31.220
+our earlier sections and if we tried to fetch that message we simply can't because our test queue doesn't
+
+09:31.220 --> 09:38.570
+have any binding to the default queue in rabbit queue because it is only binded to the text Xchange
+
+09:39.110 --> 09:41.090
+which doesn't have our message.
+
+09:41.360 --> 09:48.240
+And if we tried to get messages and it's going to say the queue is empty.
+
+09:48.310 --> 09:55.540
+So as you can see working with default queues and Xchange is kind of problematic with rabid MQ because
+
+09:55.780 --> 10:01.370
+you simply cannot know what your message is going to be delivered because you're not providing any queue
+
+10:01.370 --> 10:05.300
+or exchange configuration or even routing.
+
+10:05.360 --> 10:12.960
+So as we see with this example using convert and sand object method is kind of a danger because with
+
+10:12.970 --> 10:18.160
+this way our message is simply delivered to keep the default Exchange.
+
+10:18.730 --> 10:25.510
+Let's try to improve our message and try to deliver it to our queues and exchanges we created in our
+
+10:25.510 --> 10:33.120
+early elections which are the test Q for Q and for Xchange the test Xchange.
+
+10:33.190 --> 10:40.310
+All right so let's go back to our code and let's change our method.
+
+10:40.500 --> 10:50.100
+And I'm simply going to delete this line and I'll say convert and send.
+
+10:50.150 --> 10:58.150
+So let's select the Xchange routing key an object Methot and try to implement our changes for avideo
+
+10:58.200 --> 11:01.650
+queue for the Xchange.
+
+11:01.730 --> 11:05.050
+I'm going to say test the exchange
+
+11:08.590 --> 11:10.840
+and forward routing key.
+
+11:11.160 --> 11:16.450
+I'll say test routing.
+
+11:16.630 --> 11:19.330
+Let's fix that typo.
+
+11:19.330 --> 11:20.440
+Here we go.
+
+11:20.470 --> 11:28.740
+And for the message I'm again going to say hello from coat.
+
+11:28.850 --> 11:29.830
+Simple as that.
+
+11:31.200 --> 11:35.450
+So let's just rerun our application and see what's going to happen now.
+
+11:44.640 --> 11:45.950
+All right.
+
+11:46.050 --> 11:48.260
+Our message seems to be delivered to them.
+
+11:48.260 --> 11:55.530
+Q As we can see from this line here because again it would have thrown an exception if it could not
+
+11:55.530 --> 11:58.120
+connect to to our broker.
+
+11:58.230 --> 12:01.800
+So let's switch back to our dashboard for abit in queue.
+
+12:02.370 --> 12:06.880
+And as you can see our exchange has a spike just right here.
+
+12:07.110 --> 12:18.090
+As you can see and if we go to our Qs and our queue doesn't seem to be receiving any message that is
+
+12:18.090 --> 12:26.780
+simply because we didn't provide any binding for the routing key and our routing queue was again test
+
+12:26.780 --> 12:31.840
+routing and we didn't have any binding for that for the test Xchange.
+
+12:32.030 --> 12:40.220
+If we go over to our exchanges section again and click on our test Xchange we can see that we have a
+
+12:40.400 --> 12:46.630
+single binding for the test queue and it doesn't have in a routing key as test routing.
+
+12:46.730 --> 12:54.620
+So if we try to get messages from our test queue we're going to see that we don't have any messages
+
+12:55.220 --> 12:57.420
+and let's click get messages.
+
+12:57.470 --> 13:07.280
+And as you can see our queue is simply and the now to receive this message to bind our routing key with
+
+13:07.340 --> 13:10.630
+our QNX change to connect them.
+
+13:10.700 --> 13:18.950
+Let's go to queue's and from cue's let's just create a new queue and I'm going to name this to you as
+
+13:19.570 --> 13:20.030
+router.
+
+13:20.040 --> 13:27.470
+Q Okay and let's copy the name and I'll simply click add.
+
+13:27.480 --> 13:29.540
+Q All right.
+
+13:30.610 --> 13:40.620
+Now let's go to exchanges and bind his queue to our test Xchange or click test exchange and from there
+
+13:41.160 --> 13:45.500
+I'm going to provide the name of my queue and forward routing.
+
+13:45.750 --> 13:47.850
+I'll say test routing.
+
+13:48.230 --> 13:49.250
+All right.
+
+13:52.000 --> 13:57.150
+So now I'm just going to hit bind and here we go.
+
+13:57.430 --> 14:03.960
+Our grouted Q Is binded to our test Xchange so to test that out.
+
+14:04.210 --> 14:12.700
+Let's go back to our application and rerun it simply just rerun it and see what's going to happen again.
+
+14:14.720 --> 14:16.360
+All right.
+
+14:16.490 --> 14:22.650
+Our message seems to be delivered to rabid Q as we can see in the statement right here.
+
+14:22.670 --> 14:27.680
+Let's go back to our dashboard and see what happened this time.
+
+14:27.680 --> 14:28.710
+All right.
+
+14:28.880 --> 14:31.980
+We have spikes in our exchange.
+
+14:32.030 --> 14:36.510
+As you can see and let's go back to our Qs.
+
+14:36.650 --> 14:38.060
+And here we go.
+
+14:38.120 --> 14:44.530
+We have a message ready to be delivered to an exchange or a queue in a crowded queue.
+
+14:44.810 --> 14:47.640
+As you can see here we have a total of one.
+
+14:47.870 --> 14:55.220
+If we click on our rather queue you can again see the spike in our queue with the message waiting in
+
+14:55.220 --> 14:58.400
+our queue to be delivered to the subscriber.
+
+14:58.400 --> 14:59.370
+All right.
+
+14:59.630 --> 15:06.930
+So to see the message let's go down and get our messages from our queue.
+
+15:07.640 --> 15:09.490
+So I'll hit get messages.
+
+15:09.830 --> 15:11.100
+And here we go.
+
+15:11.250 --> 15:12.150
+We are.
+
+15:12.260 --> 15:17.290
+Hello from code message in our crowded queue in rabidity.
+
+15:17.300 --> 15:25.090
+Q dashboard so let's just go back to our code see what we just developed and what happened in this code.
+
+15:26.390 --> 15:34.730
+So we used the convert and sound method with Xchange routing key and with the message that we're going
+
+15:34.730 --> 15:43.910
+to publish for the Xchange definition we used our test Xchange and for drownding we said we're going
+
+15:43.910 --> 15:49.470
+to use test routing which is simply the routing that we defined for the router.
+
+15:49.490 --> 15:55.680
+Q And how we did that we did that using the exchanges section.
+
+15:55.820 --> 16:00.460
+We went over to our text exchange and we binded our router.
+
+16:00.470 --> 16:08.970
+Q With the test routing just like we saw here and then we simply published our Hello from code message
+
+16:09.450 --> 16:17.640
+and that message simply received by the task Xchange years and test exchange with the help of its test
+
+16:17.640 --> 16:28.030
+routing binding delivered it to our test queue or the name of our section routed queue as you can see
+
+16:28.030 --> 16:32.690
+here are messages still in our queue simply because there are no listeners for this.
+
+16:32.690 --> 16:35.420
+Queue so rabidly.
+
+16:35.440 --> 16:39.160
+Q simply cannot deliver this message to anyone.
+
+16:39.160 --> 16:40.440
+It is still waiting there.
+
+16:40.540 --> 16:48.370
+And if we check it out again we can still see it just like that.
+
+16:48.600 --> 16:54.240
+So we can stay a couple of findings about rather template and how things work with grabbing them.
+
+16:54.240 --> 17:03.670
+Q First we have to be careful about the way that we send our message to either an exchange or a queue.
+
+17:04.000 --> 17:11.440
+We have to be specific about our exchanges queues and routings because otherwise if we dont provide
+
+17:11.770 --> 17:18.280
+any exchanges binding or a routing key our messages are going to be delivered to default exchanges and
+
+17:18.280 --> 17:19.680
+default queues.
+
+17:19.690 --> 17:23.830
+So that way our messages can get lost in the system.
+
+17:23.830 --> 17:28.960
+We have to be explicit about our exchanges queues and routing keys.
+
+17:28.960 --> 17:34.270
+This is a really key point in using rabbit template and of course Rabbitte MQ.

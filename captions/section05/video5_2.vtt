@@ -1,0 +1,196 @@
+WEBVTT
+
+00:01.200 --> 00:09.300
+From our previous examples and implementations we already know how to create cues using Java and spring
+
+00:09.450 --> 00:10.080
+for rabbit.
+
+00:10.100 --> 00:13.330
+Q But is that all.
+
+00:13.370 --> 00:16.950
+And is that the only way to create cues.
+
+00:17.230 --> 00:18.400
+That's No.
+
+00:18.590 --> 00:26.950
+We have several ways to implement queues and configure them with spring and Jawa So to take a closer
+
+00:26.950 --> 00:27.930
+look at it.
+
+00:28.860 --> 00:35.400
+Let's create another configuration class and try to create queues in different ways.
+
+00:36.410 --> 00:49.860
+So I'm going to create a new class and I'll give the name to my class as rabbit and q q configuration.
+
+00:49.880 --> 01:00.730
+All right and of course that class is going to be annotated as a configuration for our purpose.
+
+01:01.300 --> 01:02.060
+All right.
+
+01:03.070 --> 01:12.640
+Now the first and the initial way of creating Qs with rabbit MQ using spring and Jawa was the bean way
+
+01:12.640 --> 01:23.440
+of defining the Qs so let's remember that again we were creating a bean for our cue and we were saying
+
+01:24.370 --> 01:34.770
+we wanted a cue from of course and keep the core and we can provide any name for our method.
+
+01:34.780 --> 01:36.930
+This is just going to be a reference.
+
+01:37.030 --> 01:41.520
+So you can just type example Q or anything
+
+01:44.430 --> 01:55.140
+and inside the bean we were returning as the type of the cue we were saying Return new cue and then
+
+01:55.650 --> 02:04.120
+we were providing the durability and other arguments for the Q and for the simplicity we first provided
+
+02:04.120 --> 02:08.890
+the name for the Q and let's say example Q
+
+02:13.810 --> 02:17.860
+Or we have a typo there and let's just fix that.
+
+02:20.570 --> 02:25.810
+And forward the second argument as durability.
+
+02:25.910 --> 02:28.000
+You provided false.
+
+02:28.130 --> 02:36.600
+So this is the weird basic and simplest way to create cues using spring and Jawa.
+
+02:36.840 --> 02:41.320
+If we run our application we will be simply seeing an example.
+
+02:41.350 --> 02:51.010
+You create it inside or rabid MQ Broecker But how about the other ways of creating cues.
+
+02:51.110 --> 02:59.440
+We have a very useful class for creating cues from AM Cupie which is the cube builder.
+
+02:59.490 --> 03:01.470
+So let's take a look at it right now.
+
+03:02.760 --> 03:09.150
+I'll just go down below and I'm going to say I need a bean again.
+
+03:09.480 --> 03:17.590
+And with that being I'm going to create a Q but this time it's going to be in a different way.
+
+03:17.900 --> 03:21.590
+So I'll say example.
+
+03:21.590 --> 03:22.740
+Second Q..
+
+03:24.310 --> 03:31.810
+And inside this method inside this bean I'm going to build a new cue.
+
+03:32.110 --> 03:44.640
+So I'll say return to builder and you should note that it's coming from al Qaeda Corrigan and we're
+
+03:44.650 --> 03:52.350
+now going to use this builder methods to build our CU in a fluent and declare that way.
+
+03:52.360 --> 03:56.640
+So I want my cue to be durable.
+
+03:57.040 --> 04:01.000
+All pro-white auto delete.
+
+04:01.000 --> 04:05.230
+And I can say it is exclusive or not.
+
+04:05.650 --> 04:11.490
+And I can of course provide arguments in a key Willo fashion.
+
+04:11.530 --> 04:19.470
+And of course I can provide multiple arguments as a map of key well use and so on.
+
+04:19.480 --> 04:27.100
+So when I finished declaring my queue in this builder method I can simply call the build method and
+
+04:27.400 --> 04:31.640
+say that my queue is ready just like that.
+
+04:31.840 --> 04:39.910
+And of course for our queue to be built properly we have to give it a name right here.
+
+04:40.030 --> 04:43.860
+So for our purpose I'm going to say.
+
+04:44.140 --> 04:46.210
+Example.
+
+04:46.210 --> 04:47.320
+Second Q..
+
+04:48.380 --> 04:49.040
+All right.
+
+04:50.000 --> 04:57.710
+Now if we run our application again we should be seeing that we have to use one as the example Q And
+
+04:57.710 --> 05:00.700
+the second one as the example second.
+
+05:00.700 --> 05:03.510
+Q So let's rerun our application
+
+05:08.120 --> 05:09.950
+Our application is starting up
+
+05:12.900 --> 05:20.010
+and here we go and let's go down below to our logs and take a closer look at them.
+
+05:20.810 --> 05:29.660
+And you should note that we have two different lines this time we have lines saying order declaring
+
+05:29.690 --> 05:36.660
+a non-durable auto delete or exclusive Q named as example.
+
+05:36.660 --> 05:45.020
+Q The one that we annotated down one up we just created right here and the second line below that is
+
+05:45.020 --> 05:46.710
+saying the same thing.
+
+05:46.760 --> 05:54.980
+An example second Q as durable to auto delete true and exclusive.
+
+05:54.980 --> 05:56.850
+True and so on.
+
+05:57.230 --> 06:03.860
+So let's take them out in the rabbit MQ dashboard.
+
+06:03.910 --> 06:04.800
+All right.
+
+06:04.800 --> 06:13.450
+And as we can see here we have example Q And we have example second queue created from our gelcoat.
+
+06:13.600 --> 06:20.460
+And if we go inside the example queue it doesn't have any features and durability.
+
+06:20.890 --> 06:30.420
+But if we go back and check out the example second queue it is exclusive auto delete.
+
+06:30.420 --> 06:40.330
+We were able to create our queues in two different ways using the declared API eyes of AM KPN spraying.
+
+06:40.420 --> 06:48.280
+So these are the two most preferred ways of creating queues using spring and Jawa and you can simply
+
+06:48.280 --> 06:54.970
+create any kind of queue with any arguments that you want using this declared the builder methods.

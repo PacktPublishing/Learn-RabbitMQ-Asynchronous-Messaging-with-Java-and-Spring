@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.480 --> 00:02.780
+So let's start with exchanges.
+
+00:04.890 --> 00:11.140
+Exchanges are basically the actual am Cupie elements where messages are sent.
+
+00:11.140 --> 00:19.800
+At first just as we saw with the previous picture they take a message and route it into one or more
+
+00:19.810 --> 00:20.190
+cues.
+
+00:20.200 --> 00:22.390
+And this is a key concept.
+
+00:22.510 --> 00:28.990
+You can just send a message to an exchange and from that exchange your message can be routed to a single
+
+00:28.990 --> 00:30.900
+queue or multiple cues.
+
+00:30.910 --> 00:33.590
+And this is a great feature of rabbit.
+
+00:33.590 --> 00:43.270
+Q And routing algorithm decides where to send messages from exchange routing algorithm is built into
+
+00:43.360 --> 00:50.640
+rabit MQ and when you provide the configuration of your exchange to route messages to the queues that
+
+00:50.670 --> 00:57.320
+you're interested in those messages are properly delivered to the Qs that you wanted to send.
+
+00:57.330 --> 00:58.500
+Simple as that.
+
+00:59.530 --> 01:07.030
+And these routing algorithms depend on the Xchange type and rules called as bindings these bindings
+
+01:07.030 --> 01:14.260
+are the actual configurations that I was just talking about when you configure your bindings for exchanges
+
+01:14.260 --> 01:17.040
+to cues you tie them somehow.
+
+01:17.050 --> 01:23.890
+And when you want to send a message your message is first getting to the Xchange and after the exchange
+
+01:24.190 --> 01:29.890
+your message is being delivered to a queue using the binding configuration.
+
+01:29.920 --> 01:31.860
+This is where the tying glue.
+
+01:31.870 --> 01:39.480
+This is where the action going on within the exchange and the queue bindings are simply used to bind
+
+01:39.560 --> 01:42.810
+exchanges to queues for message delivery.
+
+01:42.810 --> 01:43.960
+This is the key concept.
+
+01:44.070 --> 01:51.600
+Just as I was talking with the previous ballpoints here bindings are the glues to halt exchanges and
+
+01:51.600 --> 01:56.260
+queues all together to deliver your messages to the consumers.
+
+01:58.340 --> 02:07.310
+There are simply four exchange types and first up is direct exchange direct exchange is simply an empty
+
+02:07.310 --> 02:12.440
+string or am Cupie that direct direction for any exchange.
+
+02:12.440 --> 02:18.620
+This is basically the default exchange that I was talking about in our previous slides in previous lectures.
+
+02:18.950 --> 02:21.230
+This is where the messages are delivered.
+
+02:21.230 --> 02:26.600
+Then you say no binding or no configuration to your exchange or que.
+
+02:26.690 --> 02:30.840
+After that we have found out the exchange into default.
+
+02:30.830 --> 02:35.640
+It is defined as an Cupie Dalfin out as the name suggests.
+
+02:35.670 --> 02:42.560
+For now the exchanges are being used as the message distribution to everywhere for all the bindings
+
+02:42.560 --> 02:44.650
+that your exchange has.
+
+02:44.660 --> 02:49.100
+Your messages are being spread out all the queues with your bindings.
+
+02:49.100 --> 02:56.900
+This is simply a final exchange a topic exchange is being defined as an adult that topic as default
+
+02:57.520 --> 03:01.070
+and of course you can choose the topic that you want to send.
+
+03:01.070 --> 03:07.550
+The topic exchange a key point in the topic exchange is you define a topic and you send your message
+
+03:07.610 --> 03:09.430
+using that topic.
+
+03:09.470 --> 03:15.830
+Let's suppose you're running a e-commerce site and your customer just purchased an item from your store
+
+03:16.430 --> 03:23.090
+and you want to notify some other part of your system about this customer purchase and you have a topic
+
+03:23.270 --> 03:31.010
+named as customer purchased and when you send your message with the topic exchange with this topic your
+
+03:31.010 --> 03:35.780
+message is being delivered to the Conservative Party over your messaging system.
+
+03:35.780 --> 03:43.530
+So topic exchange is simply like the specific way of delivering messages in an Cupie.
+
+03:43.550 --> 03:51.020
+Finally we have header's exchange headboards exchange are basically the way to exchange headers with
+
+03:51.020 --> 04:00.170
+messages in AM Cupie And of course with rabid MQ you exchange messages and you want to just maybe exchange
+
+04:00.170 --> 04:06.420
+your headers with other messages and other queues and exchanges or maybe other consumers.
+
+04:06.440 --> 04:13.880
+This is the way to exchange messages for headers in rabbit named Q And for the default you can use and
+
+04:13.900 --> 04:21.360
+Cupie up match or and keep the data headers and some specific or custom header that you want to provide.

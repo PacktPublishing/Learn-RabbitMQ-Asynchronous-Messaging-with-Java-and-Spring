@@ -1,0 +1,499 @@
+WEBVTT
+
+00:02.040 --> 00:05.550
+So we already know how to publish messages to rabbit.
+
+00:05.570 --> 00:10.020
+Q exchanges knows time that we create our listener.
+
+00:10.030 --> 00:15.680
+So how do you listen to messages programmatically with Jawa spring and rabbit.
+
+00:15.690 --> 00:16.730
+Q Of course.
+
+00:17.530 --> 00:20.680
+So for that purpose I'm going to create a new project
+
+00:24.960 --> 00:36.810
+and again I'm going to be using spring initialiser and from there I'm going to say Come example and
+
+00:37.950 --> 00:44.380
+rabbit listner project just like that.
+
+00:45.200 --> 00:46.590
+And I'll hit next.
+
+00:48.160 --> 00:57.940
+And from the dependencies I'm going to pick messaging and Rabbitt MQ just like that I'll hit next again
+
+00:58.750 --> 01:02.060
+and I'm going to have my project create it.
+
+01:03.300 --> 01:10.540
+I'm going to use a new window.
+
+01:10.580 --> 01:11.720
+All right.
+
+01:12.050 --> 01:17.960
+Intelligence and Maven is resolving our dependencies and it's already finished.
+
+01:18.020 --> 01:24.430
+So now what do we need to create the message listener for rabbit named Q.
+
+01:25.220 --> 01:33.950
+If you remember our slides back in our exchanges Qs and their definitions the Qs were the actual points
+
+01:34.010 --> 01:37.490
+of interest for subscribers and consumers.
+
+01:37.490 --> 01:45.200
+So when we publish a message that message goes to an exchange and that exchange has to be bounded to
+
+01:45.200 --> 01:50.680
+a queue so that it could be sent from subscribers and consumers.
+
+01:50.750 --> 01:56.330
+So with that information in mind we have to be listening to a cue for our messages.
+
+01:56.330 --> 02:02.720
+We can't just listen to an exchange because the exchange is the actual pull of messages to be transferred
+
+02:02.720 --> 02:06.430
+to cues and other messaging structures and rabbit.
+
+02:06.450 --> 02:11.070
+Q So we have to build our foundation for listening to it.
+
+02:11.070 --> 02:13.580
+Q rather than an exchange.
+
+02:14.250 --> 02:20.640
+So for that purpose I have to first create a class for listening to messages.
+
+02:20.740 --> 02:28.240
+The first incoming message point for our application and for that purpose I'm going to create a new
+
+02:28.240 --> 02:40.620
+class and that class is the name of my listener and I'm going to say to be declarative I'm going to
+
+02:40.620 --> 02:41.410
+say rabbit.
+
+02:41.430 --> 02:42.980
+Q message.
+
+02:42.980 --> 02:45.420
+Listener.
+
+02:45.640 --> 02:46.270
+All right.
+
+02:47.620 --> 02:55.720
+And for that class to work as a listener for rabbit Q I have to implement the message listener from
+
+02:55.750 --> 02:58.180
+AM Cupie project offspring.
+
+02:58.570 --> 03:00.270
+So let's just do that.
+
+03:00.320 --> 03:00.740
+And
+
+03:03.500 --> 03:10.610
+I'm going to have to override the on message method from message listener just like you saw with the
+
+03:10.610 --> 03:12.150
+error message here.
+
+03:12.500 --> 03:19.360
+And if we go all over it it says you have to implement the on message method which is abstract.
+
+03:19.580 --> 03:22.390
+So let's go down and do that.
+
+03:22.400 --> 03:27.160
+Now I'm going to override the method.
+
+03:27.350 --> 03:28.940
+And here we go.
+
+03:29.980 --> 03:35.500
+This all message method is going to be the initial point for our message when we receive it.
+
+03:35.500 --> 03:42.570
+Man we configure our rabbit named Q For the cool listening we're going to be receiving our messages
+
+03:42.570 --> 03:44.170
+right in this method.
+
+03:44.430 --> 03:47.550
+Just like with soul with the message right here.
+
+03:47.820 --> 03:53.110
+This parameter is going to be injected by spring and Cupie and a rabbit named q.
+
+03:53.250 --> 04:00.730
+So we could try and process our message to just print out a message that we receive.
+
+04:00.890 --> 04:06.570
+I'm going to use the system our print line just like we saw here.
+
+04:06.590 --> 04:12.940
+And intelligence is helping me out there to print out the nice beautiful logging message.
+
+04:13.040 --> 04:17.390
+And as you can see I can print out the message right away.
+
+04:18.020 --> 04:24.620
+But since the rabbit is key using a byte array format for exchanging messages.
+
+04:24.830 --> 04:31.880
+So in order to me to print out the message correctly as an actual string I have to wrap it around a
+
+04:31.880 --> 04:32.830
+string.
+
+04:33.350 --> 04:41.930
+So for that purpose I'm going to say new string and wrap the message around.
+
+04:42.030 --> 04:48.420
+But as you remember from our previous slides rabbit MQ messages are not just simple messages.
+
+04:48.510 --> 04:56.160
+They can be having a header under properties and an actual body for the content of the message.
+
+04:56.160 --> 05:00.950
+So for that purpose again I'm going to get the body of the message.
+
+05:01.080 --> 05:03.280
+Here we go.
+
+05:03.280 --> 05:04.330
+All right.
+
+05:04.330 --> 05:06.490
+Our message listener class is ready.
+
+05:06.490 --> 05:12.170
+But how about the configuration for the Q and the connection to it.
+
+05:13.150 --> 05:16.690
+How does my application knows where to listen.
+
+05:16.690 --> 05:25.180
+So for doing that I'm going to create a configuration class for rabbit named Q and give it to name as
+
+05:25.450 --> 05:28.630
+rabbit and q config.
+
+05:29.560 --> 05:38.980
+All right this class is going to be handling all my connections to Q and the actual rabbit named Q Broecker.
+
+05:39.480 --> 05:47.130
+So for that purpose and to be fruitful with our implementation I'm going to say this glass is a configuration
+
+05:47.310 --> 05:49.290
+in the spring annotation way.
+
+05:50.450 --> 05:51.400
+All right.
+
+05:52.520 --> 06:00.560
+And what I have to do here is I have to define the queue did I want to listen to and I have to provide
+
+06:00.620 --> 06:08.950
+the connection to that Q and I have to bind my connection with the Q And also the message listening
+
+06:08.960 --> 06:10.910
+class that we just created.
+
+06:10.910 --> 06:12.570
+Right.
+
+06:12.790 --> 06:13.790
+All right.
+
+06:13.930 --> 06:19.550
+So let's start by defining our Q for defining r.
+
+06:19.560 --> 06:32.530
+Q I'm going to create a name for my queue first and I'm going to say final and string my Q
+
+06:36.020 --> 06:42.520
+and I'm going to say my Q Just like that.
+
+06:42.590 --> 06:43.760
+All right.
+
+06:43.760 --> 06:46.680
+Let's use the name for our Q.
+
+06:46.700 --> 06:48.050
+We're going to create.
+
+06:49.440 --> 06:53.910
+For creating a Q There are of course several ways to do that.
+
+06:54.030 --> 07:03.000
+You can use the Q annotation just like you see here which has some arguments that you can provide as
+
+07:03.000 --> 07:12.330
+the name the durability exclusivity auto delete and other things but to a declarative and to be clear
+
+07:12.360 --> 07:13.780
+as much as possible.
+
+07:13.920 --> 07:21.040
+I'm going to create the bean for my cue and try to define my cue as that clarity was possible.
+
+07:22.330 --> 07:26.230
+So I'll say I'm going to create a bean for spraying.
+
+07:26.470 --> 07:35.970
+And from that bean I'm going to say I want to cue which is actually the cue annotation that I just included
+
+07:35.970 --> 07:37.410
+is coming in way.
+
+07:37.440 --> 07:46.440
+So I'm just removing the import statement and I'll say Q Which has to come from sping and keep the duck
+
+07:46.440 --> 07:47.170
+core.
+
+07:47.310 --> 07:55.690
+So this is what I want and I'll say my cue and now I'm going to create a Q Right.
+
+07:55.710 --> 07:57.330
+In this method.
+
+07:57.330 --> 08:03.500
+So for the Q. I'm going to return a new q.
+
+08:04.010 --> 08:14.820
+The name of the Q is going to be of course my Q And the second argument for that Q constructor is actually
+
+08:14.820 --> 08:17.340
+as you can see the durability.
+
+08:17.370 --> 08:22.000
+So for durability I'm going to say true.
+
+08:23.090 --> 08:26.330
+All right it's simple as that.
+
+08:26.390 --> 08:34.280
+We just have a Q to be created in rabbit m q and take note of the word create it.
+
+08:34.280 --> 08:39.100
+The beauty of rabit them Q and Q spring is right here.
+
+08:40.320 --> 08:48.360
+So if we define a Q and created with the B.net notation bammy launch our application Our application
+
+08:48.360 --> 08:53.170
+is going to create an actual queue for us in rabit named Q.
+
+08:53.430 --> 08:54.900
+Isn't that beautiful.
+
+08:55.080 --> 09:01.550
+In our previous videos remember that we created our cues from the dashboard of self.
+
+09:01.590 --> 09:08.880
+You may not have access to your dashboard or maybe your administrators doesn't allow you to use it.
+
+09:09.090 --> 09:15.300
+So in that case you can just programmatically create queues exchanges and everything about Rabbitte
+
+09:15.300 --> 09:16.070
+named.
+
+09:16.520 --> 09:23.870
+This is a very beautiful and declarative way to create queues and Xchange is so with that information
+
+09:23.870 --> 09:24.630
+in mind.
+
+09:24.920 --> 09:30.390
+Let's move on to creating our connection to our Rabbitt MQ Broecker.
+
+09:30.530 --> 09:40.590
+So let's go down and also create a bean for our connection to our Rabbitt MQ Broecker and for that purpose
+
+09:41.160 --> 09:44.040
+I'm going to use the connection factory
+
+09:46.600 --> 09:57.290
+and with that connection factory I'm going to create the connection to my actual Broecker so to do that.
+
+09:57.500 --> 10:05.090
+Let's create a caching connection factory because we want our connection to be stable and resilient
+
+10:05.390 --> 10:08.910
+so that we don't have to open or close any connection.
+
+10:09.020 --> 10:12.100
+Back and forth with the Broecker a rabbit named Q.
+
+10:12.380 --> 10:20.650
+So I'm going to create a caching connection factory and I'll say a new question.
+
+10:20.650 --> 10:22.950
+Connection factory.
+
+10:23.020 --> 10:32.700
+And as the argument as the constructor argument for this method it has a method with hostname.
+
+10:32.700 --> 10:40.850
+So in our case since we're running our rubidium queue in our local machine I can safely provide local
+
+10:40.850 --> 10:42.180
+host.
+
+10:42.690 --> 10:47.270
+So I'll say localhost alright.
+
+10:47.460 --> 10:50.660
+And as you can see it's the hostname argument.
+
+10:50.660 --> 10:54.310
+All right for the credentials.
+
+10:54.630 --> 10:59.100
+I'm going to say set username.
+
+10:59.100 --> 11:07.860
+I'm going to use the defaults the default username of course is guessed for rabid Q And for the password
+
+11:07.860 --> 11:11.670
+again I'll say yes.
+
+11:12.090 --> 11:13.450
+Just like that.
+
+11:13.590 --> 11:20.630
+So far our being to be created I have to return our caching connection factory.
+
+11:20.630 --> 11:21.110
+All right.
+
+11:21.120 --> 11:22.750
+We have a problem.
+
+11:23.190 --> 11:31.280
+And OK the connection factory that we need to use has to be coming from an Cupie itself.
+
+11:31.290 --> 11:33.200
+We used an incorrect import.
+
+11:33.390 --> 11:36.560
+So I'll just get rid of that.
+
+11:36.930 --> 11:42.870
+I'll just get rid of the connection factory and I'm loving intelligent too.
+
+11:42.910 --> 11:44.430
+Important for me.
+
+11:44.430 --> 11:45.790
+All right.
+
+11:45.790 --> 11:51.350
+So this has to be coming from AM keeping rabbit connection.
+
+11:51.720 --> 11:56.530
+And here we go or find him one.
+
+11:56.560 --> 12:03.400
+All right we have our qued declarant we have our connection to message broker to our Rabbitte name.
+
+12:03.400 --> 12:11.500
+Q Now what is missing is that we have to create a message listener container so that we can bind all
+
+12:11.500 --> 12:12.340
+those things.
+
+12:12.460 --> 12:18.010
+The message listener class the connection factory and the queue.
+
+12:18.160 --> 12:20.770
+So we can actually start listening to this.
+
+12:20.770 --> 12:27.550
+Q All right I'll go down below here and I'm going to create a message listner container.
+
+12:28.890 --> 12:38.880
+So again I'm going to use to be way and all say message listener container and I'm going to construct
+
+12:38.910 --> 12:44.010
+my message listener container for my message listener container.
+
+12:44.160 --> 12:54.430
+I don't have to provide lots of information so I can just use the simple message listener container.
+
+12:54.580 --> 12:55.310
+Here we go.
+
+12:56.640 --> 13:01.310
+And I have to construct this simple message container.
+
+13:01.350 --> 13:03.310
+And here we go.
+
+13:04.490 --> 13:09.670
+So now what do we need to do is we have to set the connection factory.
+
+13:09.670 --> 13:14.470
+The key to the actual message listener class and so on.
+
+13:14.720 --> 13:18.140
+So let's start by providing the connection factory
+
+13:21.060 --> 13:28.110
+and for the connection factory of course we're going to use our connection factory to the one that we
+
+13:28.110 --> 13:29.040
+defined here.
+
+13:30.270 --> 13:35.100
+And for dequeue I'm going to say
+
+13:38.410 --> 13:46.750
+my Q and you should note that the method is actually expecting more than one Q But you can of course
+
+13:46.750 --> 13:54.430
+provide any number of cues because with this way you might be wanting to listen to more than one.
+
+13:54.430 --> 13:57.770
+Q And this is quite possible.
+
+13:57.780 --> 14:04.280
+What message listener container for the less part of our connection for our container.
+
+14:04.450 --> 14:18.730
+I have to set the actual message listener class and for that purpose I'll say set message listener I'll
+
+14:18.730 --> 14:29.630
+provide the rabbit MQ message listener class so I have to provide a new version of that new rabbit.
+
+14:29.740 --> 14:36.400
+MQ message listener just like that.
+
+14:37.490 --> 14:43.370
+So for the last step I have to return my simple message listener container
+
+14:46.080 --> 14:47.780
+and here we go.
+
+14:47.820 --> 14:55.670
+We just finished the listener configuration Farrar Aberdare que to test it out and see what's going
+
+14:55.670 --> 14:57.040
+to happen.
+
+14:57.080 --> 14:58.730
+I'll be seeing you on the next video.

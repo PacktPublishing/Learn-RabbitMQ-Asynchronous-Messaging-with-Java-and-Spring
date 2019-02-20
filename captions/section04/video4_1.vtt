@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.940 --> 00:07.920
+All right we're about to start developing our own applications where rabid MQ.
+
+00:08.490 --> 00:14.820
+And before we dig into our development section let's go where what we're going to do in this section
+
+00:16.260 --> 00:22.160
+in this section we will learn how to use Rabbitt template for spraying this.
+
+00:22.170 --> 00:26.450
+Robert Templer is the beautiful and simple way to use rabbit.
+
+00:26.440 --> 00:28.890
+Q With spring and job of course.
+
+00:28.890 --> 00:34.320
+So we're going to make use of it extensively in our sections and I'll show you all the methods of it
+
+00:34.500 --> 00:35.550
+in our sections.
+
+00:35.550 --> 00:42.850
+When were developing our applications and next we're going to learn how to publish messages with Rabbitte
+
+00:42.850 --> 00:51.790
+template and spring and Jawa and then we're going to configure our Qs and then we're going to configure
+
+00:51.790 --> 00:54.550
+our topics and routing between them.
+
+00:56.820 --> 01:02.490
+After reconfigure our queue's topics and routing We're of course going to learn how to configure our
+
+01:02.490 --> 01:06.110
+own exchanges from the actual Java code.
+
+01:06.240 --> 01:14.760
+And of course making use of spring dependency injection after we finish with configuring our exchanges
+
+01:14.760 --> 01:21.540
+topics and queues we're going to configure our listener to listen to messages coming from exchanges.
+
+01:21.540 --> 01:30.570
+And finally by cue's after we learned how to use Rabbitte template and configure our Qs Xchange and
+
+01:30.570 --> 01:37.680
+topics we're going to combine all of our knowledge in the section and we're going to both send and receive
+
+01:37.680 --> 01:39.120
+messages from rabidity.
+
+01:39.120 --> 01:45.960
+Q Broecker So this section is going to be a very useful section to learn how things work with rabid
+
+01:45.980 --> 01:54.540
+MQ both using Java and spring so I encourage you to watch these lectures very carefully and try to implement
+
+01:54.690 --> 01:55.930
+while watching them.
+
+01:57.430 --> 02:01.450
+So to start with using Rabbitt template I'll be seeing you in the next video.

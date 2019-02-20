@@ -1,0 +1,70 @@
+WEBVTT
+
+00:01.970 --> 00:07.620
+So we are about to discover the pillars are the building blocks of rabbit.
+
+00:07.620 --> 00:12.720
+Q And these are exchanges cues topics and bindings.
+
+00:12.980 --> 00:20.070
+These are the foundational concepts in regard of rabid MQ or any AM keeps about four of them.
+
+00:20.070 --> 00:27.390
+Q These are very important concepts so I'd like you to pay very careful attention to this lecture.
+
+00:27.500 --> 00:31.480
+And if you need to please go back and watch it again.
+
+00:31.850 --> 00:39.300
+So let's start with four actors of messaging with rabid MQ in rabbit.
+
+00:39.330 --> 00:47.850
+Q We of course have a message producer this producer produces some form of message and this message
+
+00:48.240 --> 00:59.010
+is being sent to an Xchange this Xchange can be a default Xchange or a custom exchange that you created.
+
+01:00.320 --> 01:10.730
+I thought that from the exchange the message is it disrupting mechanism can be defined by you or by
+
+01:10.980 --> 01:11.480
+rabit them.
+
+01:11.490 --> 01:21.610
+Q As the default with this routeing defined your message is being delivered to a queue this queue is
+
+01:21.850 --> 01:26.990
+where the messages are piled up to be sent to the consumers.
+
+01:27.270 --> 01:34.150
+So when it reaches the queue it is being delivered to a consumer.
+
+01:34.270 --> 01:38.740
+The consumer is waiting there expecting the message.
+
+01:38.810 --> 01:41.540
+This can be a bad application.
+
+01:41.680 --> 01:48.250
+Some Java application or a simple command line application can be simply anything.
+
+01:48.250 --> 01:51.640
+So it is receiving the message at the end.
+
+01:51.940 --> 02:02.290
+This lifecycle of messages with rabid MQ using producer message and exchange routing a Q and A consumer
+
+02:02.590 --> 02:04.900
+is like an infinite lifecycle.
+
+02:04.930 --> 02:12.340
+All these processes and stages are rewind it and replay it whenever you send whenever you try to deliver
+
+02:12.340 --> 02:13.470
+a message.
+
+02:13.510 --> 02:20.560
+So let's just focus on foundational concepts that we see here and these are producers Xchange routings
+
+02:20.560 --> 02:21.880
+cues and consumers.

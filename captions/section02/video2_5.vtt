@@ -1,0 +1,181 @@
+WEBVTT
+
+00:01.200 --> 00:08.460
+Know it's time that we create our first cue exchange and binding between them to do that.
+
+00:08.490 --> 00:09.790
+I have my rabbit.
+
+00:09.790 --> 00:13.030
+MQ management you I open running in front of me.
+
+00:14.400 --> 00:20.020
+So let's go to exchanges first and create an exchange for us.
+
+00:20.130 --> 00:23.180
+So all hit at a new exchange.
+
+00:23.220 --> 00:34.500
+And as the name let's say this is a testy exchange and let's just say the type will be tracked and durability
+
+00:34.770 --> 00:36.930
+is durable by default.
+
+00:36.930 --> 00:39.650
+So I'm not touching it at all.
+
+00:39.710 --> 00:42.210
+Delete as know no in total as.
+
+00:42.210 --> 00:42.910
+No.
+
+00:42.990 --> 00:49.530
+And there are no arguments for now and just don't worry about the details right now and I'll just simply
+
+00:49.530 --> 00:51.570
+hit and exchange to create it.
+
+00:54.000 --> 00:54.930
+Here we go.
+
+00:54.930 --> 00:58.970
+We have our exchanges created right here.
+
+00:59.300 --> 01:04.910
+And as you can see it has a section named as bindings which has none right now.
+
+01:05.040 --> 01:13.070
+And we can publish messages to this exchange and we can just delete the exchange altogether.
+
+01:13.100 --> 01:20.860
+So let's go and create a queue right now to bind us to Xchange on the QS page.
+
+01:21.010 --> 01:29.200
+I'll hit add in new Q And of course I'm going to say this is a test too and it is of course durable
+
+01:29.740 --> 01:36.850
+and for the arguments I have nothing right now I'll be using those arguments and making use of them
+
+01:37.090 --> 01:40.380
+in the later sections when we're implementing our applications.
+
+01:40.420 --> 01:42.160
+So I'll just hit add.
+
+01:42.160 --> 01:44.920
+Q Here we go.
+
+01:44.920 --> 01:51.190
+Our queue is ready to get messages from our exchange.
+
+01:51.270 --> 02:00.740
+So let's go back to our exchanges and from our text exchange let's add a binding to the queue.
+
+02:00.780 --> 02:02.140
+We just created.
+
+02:02.550 --> 02:14.090
+So I'll just bind this exchange to the queue which is test queue and the binding key is not required.
+
+02:14.090 --> 02:19.460
+So I'm just leaving it that just as is and I'll just hit bind.
+
+02:19.910 --> 02:21.190
+Here we go.
+
+02:21.260 --> 02:23.440
+Our rebinding is now this way.
+
+02:23.450 --> 02:26.700
+Right here as you can see.
+
+02:26.750 --> 02:37.460
+So let's go and publish a message to our exchange and see if it is being taken by the test you so I'm
+
+02:37.460 --> 02:50.730
+not providing any routing key but I'm just saying hi and hi from rabid MQ course just like that.
+
+02:50.930 --> 02:57.050
+I'm not adding any other property under saying in the message body which is payload.
+
+02:57.050 --> 03:01.580
+In this case and I'm just going to publish this message.
+
+03:01.580 --> 03:06.400
+So let's hit publish message and here we go.
+
+03:06.430 --> 03:16.230
+We have our popup notification saying as message published Let's go to our queue and in our queue as
+
+03:16.230 --> 03:23.730
+you can see we have a total of one message and that one is ready to see that message.
+
+03:24.030 --> 03:26.100
+Let's click on our test queue.
+
+03:26.610 --> 03:34.500
+And in the test queue as you can see from the queued message Charke right here we have ASPI that Spike
+
+03:34.500 --> 03:37.910
+is generated when we published our message.
+
+03:37.950 --> 03:45.830
+And as you can see we have a total of one messages in our queue to get that message to see the message.
+
+03:45.990 --> 03:51.340
+Let's go in click get messages and I'll hit get messages.
+
+03:53.200 --> 03:54.720
+And here we go.
+
+03:54.970 --> 04:02.150
+We can see our message to our published message in rabbit m q q and which was high from Ibidem.
+
+04:02.150 --> 04:04.540
+Q As simple as that.
+
+04:06.230 --> 04:12.650
+And apart from publishing and seeing this message from an exchange with binding to AQ.
+
+04:13.360 --> 04:17.470
+We have a couple of other alternatives that we can use.
+
+04:17.520 --> 04:21.450
+We have consumers that we can see if there are any.
+
+04:21.450 --> 04:27.900
+In our case there are none right now and we can see the bindings which was with the test Xchange from
+
+04:27.900 --> 04:28.270
+the test.
+
+04:28.280 --> 04:38.070
+Q As you can see here and we can also again publish messages to our queue directly from this interface
+
+04:39.000 --> 04:46.980
+and we can move messages around queues and exchanges and we can also delete the queue entirely and we
+
+04:46.980 --> 04:53.340
+can use the purge option for messages inside queue which is just simply deleting all the messages waiting
+
+04:53.340 --> 04:56.520
+for the consumers to process in the queue.
+
+04:57.090 --> 05:04.200
+And we can also see the runtime metrics for our queue which is a very detailed option for tracking your
+
+05:04.200 --> 05:07.920
+queue and the consumer traffic.
+
+05:07.940 --> 05:14.670
+So I hope this is a good introduction to management UI and creating our first Q And Exchange with a
+
+05:14.690 --> 05:15.860
+binding and rabbit name.
+
+05:15.860 --> 05:19.430
+Q And I think this is a very useful exercise.
+
+05:20.320 --> 05:25.910
+I highly encourage you to do the same in your environment and I'll be seeing you on the next section.

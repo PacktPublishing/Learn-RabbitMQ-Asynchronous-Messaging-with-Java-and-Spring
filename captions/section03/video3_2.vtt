@@ -1,0 +1,250 @@
+WEBVTT
+
+00:01.890 --> 00:07.170
+So let's talk about what is messaging and why we actually need it.
+
+00:08.740 --> 00:16.990
+Messaging is basically a form of communication with each other from person to person from application
+
+00:16.990 --> 00:20.090
+to application from a system to system.
+
+00:20.230 --> 00:28.300
+Basically anything but for the software world it provides a mechanism for loosely coupled integration
+
+00:28.300 --> 00:35.080
+of software or application components systems and even multiple systems all together.
+
+00:35.080 --> 00:38.970
+So now let's talk about what is a message itself.
+
+00:39.950 --> 00:43.560
+We exchange messages while we talk to each other.
+
+00:43.610 --> 00:51.350
+So what do you mean by that is in our daily lives we exchange messages from one person to the other.
+
+00:51.380 --> 00:58.700
+So let's suppose that you're talking to your spell's your friend or anyone else you're simply exchanging
+
+00:58.700 --> 01:00.720
+messages with each other.
+
+01:00.740 --> 01:08.270
+So you asking a question you're trying to learn something or you're simply giving out some information
+
+01:08.390 --> 01:10.520
+to your colleague or a friend.
+
+01:10.550 --> 01:14.860
+This is a simple form of message exchange.
+
+01:14.930 --> 01:19.100
+And again we're simply surrounded by different ways of messaging.
+
+01:19.120 --> 01:28.170
+In all of our daily lives from e-mail messages to instant messages everything so the simplest analogy
+
+01:28.170 --> 01:35.730
+for a message would be like a text message instant message in our whatsapp Skype or any other instant
+
+01:35.730 --> 01:38.100
+messaging application and so on.
+
+01:39.100 --> 01:47.380
+And again for this software world if you ever use so pro-law call Dan you were familiar with the message
+
+01:47.410 --> 01:51.640
+header and the body concept but this is in a different form.
+
+01:52.090 --> 01:58.950
+So soap messages were exchanged and shared through the envelopes of soap messages.
+
+01:59.530 --> 02:05.700
+So the envelope would be containing a message to a system or and other software.
+
+02:06.070 --> 02:13.410
+Then the software system receiving the message will take an action regarding the contents of that message.
+
+02:13.410 --> 02:16.970
+So this was how the so protocol was working.
+
+02:16.980 --> 02:20.470
+And it is still used today.
+
+02:20.490 --> 02:25.580
+So a typical software message contains at least a header and the body.
+
+02:25.600 --> 02:34.400
+These are the fundamental parts of a software message that we have and that we're going to use of course.
+
+02:34.440 --> 02:41.740
+Let's focus more on the software aspect of messaging and how it's use in our applications and systems.
+
+02:42.910 --> 02:48.360
+Messaging is an essential element for any kind of software and system.
+
+02:48.490 --> 02:58.440
+It's the fundamental building block of any system any software from kernels to CPQ memory from hardware
+
+02:58.450 --> 02:59.620
+or software.
+
+02:59.620 --> 03:05.300
+Everything is communicated through messages in a different form in a different shape.
+
+03:05.320 --> 03:09.520
+But whatever the reason is it is exchanged through messages.
+
+03:09.540 --> 03:14.020
+The communication is handled in forms of messages.
+
+03:14.210 --> 03:20.290
+So the software components again need to communicate somehow to do their actual work.
+
+03:21.640 --> 03:29.380
+Give you a better picture to understand yes you can think of our applications our software or a simple
+
+03:29.380 --> 03:31.920
+application that you wrote.
+
+03:31.930 --> 03:39.760
+So in this application you of course have some methods some functions to do some actual work for the
+
+03:39.760 --> 03:46.320
+work methods we'll call some other methods or other applications and you might of course have some remote
+
+03:46.330 --> 03:54.370
+methods remote application calls and you might how HTP Collines and servers and many more but these
+
+03:54.370 --> 04:02.830
+forms in the essence of them exchange messages again because an application or simply method has to
+
+04:02.920 --> 04:10.900
+talk to some other matters some other application in a forum and that forum is in its essence is a message.
+
+04:10.900 --> 04:12.650
+But as you see the flaw here.
+
+04:12.730 --> 04:15.230
+These are all synchronous forms of messaging.
+
+04:15.250 --> 04:23.260
+So to give you an example when you click on a button of a UI application of some form of UI you have
+
+04:23.260 --> 04:28.240
+to get a response from the system you're clicking on that button to do something.
+
+04:28.240 --> 04:32.580
+And of course you're going to have to receive a response from the system.
+
+04:32.590 --> 04:34.120
+This is highly natural.
+
+04:34.120 --> 04:34.930
+Very natural.
+
+04:34.930 --> 04:41.980
+But these kind of communication is mostly synchronous not asynchronous and not loosely coupled.
+
+04:42.220 --> 04:49.070
+And of course this is not designed around the concept of actual messaging and messaging have to be loosely
+
+04:49.070 --> 04:52.920
+coupled.
+
+04:52.930 --> 05:01.670
+So again why do we need message protocols and other things to communicate since we have functions methods
+
+05:01.910 --> 05:04.770
+other ways of communication are already.
+
+05:04.790 --> 05:11.080
+So now let's look at an example in the software rural to give a better understanding.
+
+05:12.640 --> 05:19.000
+Let's suppose that there is an e-commerce site on Black Friday with like millions of customer orders
+
+05:19.120 --> 05:26.650
+coming from different countries different regions and with different shopping carts.
+
+05:26.830 --> 05:28.560
+Just consider that example.
+
+05:29.200 --> 05:36.430
+And then suppose that there is a telecom operator with millions of customer messages to process and
+
+05:36.430 --> 05:37.100
+so on.
+
+05:38.310 --> 05:46.650
+So these platforms might just crash because of the load of the customers and the messages the transactions
+
+05:46.650 --> 05:50.650
+of the users that they have to process.
+
+05:50.700 --> 05:51.870
+Think about that.
+
+05:51.990 --> 05:58.380
+This is a huge log on their system and suppose that they're just trying to process all these things
+
+05:58.620 --> 06:06.000
+all at once it's near to impossible because if say were it time consuming and resource oriented task
+
+06:06.420 --> 06:12.150
+these task has to be processed separately and independently from each other.
+
+06:12.930 --> 06:19.650
+So what happens when we need to communicate and when we need to exchange loosely asynchronously and
+
+06:19.650 --> 06:27.370
+progressively instead of processing all the messages from customers all the orders from customers all
+
+06:27.370 --> 06:31.570
+at once we somehow need to queue these messages.
+
+06:31.630 --> 06:38.710
+Q These transactions and process them one by one because otherwise that's going to be a very huge load
+
+06:38.710 --> 06:39.950
+on our systems.
+
+06:40.890 --> 06:45.590
+To overcome that advanced messaging protocols are coming to the rescue.
+
+06:46.450 --> 06:52.690
+These protocols provide us the actual type of a message for communications.
+
+06:52.690 --> 06:59.710
+So you can simply encapsulate any kind of information inside a message with these protocols as simple
+
+06:59.710 --> 07:00.460
+as that.
+
+07:00.820 --> 07:08.380
+And you're getting advanced messaging structures to flow your messages through the system such as cues
+
+07:08.680 --> 07:16.440
+topics channels exchange and much more depending on the protocol that you're using for your system.
+
+07:16.450 --> 07:23.440
+So these are the fundamental concepts and understandings of a messaging system and what it means inside
+
+07:23.440 --> 07:25.270
+the software world.
+
+07:25.300 --> 07:32.470
+I hope that I gave you a better understanding and a good picture of how we use and why we use messaging
+
+07:33.430 --> 07:34.570
+in the next video.
+
+07:34.690 --> 07:37.680
+We're going to talk about the messaging protocols.
+
+07:37.680 --> 07:41.210
+There are benefits pros and cons and so on.
+
+07:41.320 --> 07:42.830
+So I'll see on the next with the.

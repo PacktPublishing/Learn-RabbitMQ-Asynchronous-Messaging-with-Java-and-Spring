@@ -1,0 +1,142 @@
+WEBVTT
+
+00:02.650 --> 00:06.770
+So we created our listener configuration for rabbit MQ.
+
+00:07.150 --> 00:10.690
+No it's time to actually test it out.
+
+00:10.720 --> 00:16.270
+So for that purpose I'll start by running our application.
+
+00:16.850 --> 00:23.080
+So let's just simply run our application and see what's going to happen.
+
+00:24.910 --> 00:25.750
+All right.
+
+00:26.620 --> 00:30.870
+Spring is initialising.
+
+00:31.110 --> 00:32.570
+And here we go.
+
+00:32.640 --> 00:34.870
+Our application is Third it.
+
+00:35.250 --> 00:39.970
+And let's take a closer look to our Application logs.
+
+00:40.110 --> 00:46.420
+And when I go down below here as you can see the rabbit.
+
+00:46.450 --> 00:55.710
+Q Our application is trying to access the rabbit named Q At Port 5 6 7 2 and you should note the line
+
+00:55.950 --> 01:05.910
+just below that created new connection and within that connection as you can see our queue our application
+
+01:06.330 --> 01:08.040
+disconnected to rapidly.
+
+01:08.060 --> 01:18.210
+Q All right so now let's go to our dashboard for Aberdeen Q and see what happened in.
+
+01:19.070 --> 01:22.610
+If we can see our Q create it in the dashboard.
+
+01:25.450 --> 01:36.160
+So let's go to Qs and bingo we have our Q create it with the actual Jellico with spring code just like
+
+01:36.160 --> 01:36.700
+that.
+
+01:36.700 --> 01:37.880
+Here we go.
+
+01:38.140 --> 01:46.540
+We have our Q create it with the configuration that we just did with rabid MQ and if we go back to see
+
+01:46.540 --> 01:48.070
+how that happened.
+
+01:49.110 --> 01:56.220
+We created the bean for our Q And for that Q We use the durability as true.
+
+01:56.280 --> 02:01.580
+And if we go back to our dashboard you're going to see that durability is true.
+
+02:01.620 --> 02:05.460
+This is the cue that we just created at.
+
+02:05.560 --> 02:13.900
+If we go back to our code we created a connection factory so that our application can connect to the
+
+02:13.900 --> 02:18.230
+rabbit MQ broker and create the queue for us.
+
+02:18.310 --> 02:20.100
+That was the purpose of it.
+
+02:20.590 --> 02:28.440
+And for listening to messages we created a message listener and for the class to catch the messages
+
+02:28.450 --> 02:31.210
+for us was the rabbit.
+
+02:31.230 --> 02:38.790
+Q message listener class so let's test out the class we created for listening to messages.
+
+02:39.160 --> 02:43.870
+So I'll go back to my dashboard and our session has expired.
+
+02:43.890 --> 02:45.630
+What's logging back again.
+
+02:46.740 --> 02:56.960
+So to test out our implementation our listener class will go down and I will publish a message so for
+
+02:56.960 --> 02:58.750
+our delivery out.
+
+02:58.760 --> 03:03.150
+I don't have to be persistent because this is going to be a very simple message.
+
+03:03.290 --> 03:05.790
+I don't have to provide any headers.
+
+03:06.080 --> 03:07.760
+I don't need any properties.
+
+03:07.940 --> 03:12.930
+I'll just simply go down to payload and 40 payload.
+
+03:13.490 --> 03:19.350
+I'll say message from rabbit and Q. dashboard.
+
+03:19.580 --> 03:28.160
+All right so I'll hit publish message and as you can see our message is published.
+
+03:28.230 --> 03:36.300
+So now when I switched back to my application here we go we have our message in the log.
+
+03:36.440 --> 03:46.250
+So our implementation is working and we can receive the messages coming to rescue just as we published
+
+03:46.700 --> 03:47.610
+the messages.
+
+03:47.750 --> 03:57.890
+Message from rabit MQ dashboard so creating configuration cues and listening to the messages coming
+
+03:57.890 --> 04:01.050
+to Q is just as simple as that rabbit.
+
+04:01.080 --> 04:09.050
+Q And as you can see here we didn't write so much lines of code we just wrote couple of beans and we
+
+04:09.050 --> 04:13.370
+just wired them and then we listened to the messages coming from that.
+
+04:13.380 --> 04:13.780
+Q.

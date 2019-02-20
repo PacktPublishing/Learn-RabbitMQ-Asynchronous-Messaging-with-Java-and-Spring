@@ -1,0 +1,109 @@
+WEBVTT
+
+00:01.740 --> 00:04.430
+Next up we have the bindings.
+
+00:04.500 --> 00:13.830
+One of the key concepts in rabbit enqueue So we have Xchange and between the Q and the exchange we have
+
+00:13.830 --> 00:21.120
+a binding binding Csar rules that exchange is used to route messages to cues.
+
+00:21.160 --> 00:27.750
+We stated that again and again and here I am saying that again because this is a very important concept
+
+00:29.320 --> 00:34.010
+to instruct an exchange named E to route messages to a cue called K.
+
+00:34.270 --> 00:38.600
+So the K-Q has to be bound to the exchange.
+
+00:39.370 --> 00:45.940
+Otherwise your messages are not going to be delivered to the SECU and your consumer will not receive
+
+00:45.940 --> 00:47.290
+the message.
+
+00:47.290 --> 00:56.040
+So this is a problem you have to be using this binding to bind your Xchange to your cue bindings may
+
+00:56.040 --> 01:00.450
+have an optional rogering key attribute used by some exchange types.
+
+01:00.450 --> 01:03.580
+So this is the topic exchange.
+
+01:03.840 --> 01:10.800
+We have to provide a topic to have an optional argument and with that optional argument with that topic
+
+01:11.340 --> 01:19.860
+our exchange can't bind itself to a specific queue so the routing key acts like a filter right.
+
+01:19.890 --> 01:23.580
+So let's take the example as the binding analogy.
+
+01:24.610 --> 01:34.540
+So think of the queue is like your destination in Istanbul city of Turkey and exchanges like the airport
+
+01:34.600 --> 01:42.470
+in Istanbul city so bindings are routes from a tattered airport to your destination.
+
+01:43.370 --> 01:47.800
+There can be like zero or much more ways to reach it right.
+
+01:48.800 --> 01:52.200
+So I hope you're here with me in this analogy again.
+
+01:52.220 --> 01:59.270
+Q is like your destination in Istanbul in Turkey and the exchanges like Ataturk Airport in Istanbul
+
+01:59.570 --> 02:06.160
+and the bindings are like the routes from the airport to your destination.
+
+02:06.500 --> 02:11.300
+So simply there can be like 0 are much more ways to reach it.
+
+02:11.330 --> 02:12.780
+Simple as that.
+
+02:12.800 --> 02:19.580
+This is a very important example and I hope you think about this again and again to grasp all the points
+
+02:19.580 --> 02:21.440
+in this.
+
+02:21.490 --> 02:28.180
+And finally if messages cannot be routed to any queue so simply there are no bondings for that exchange
+
+02:28.180 --> 02:30.010
+it was published too.
+
+02:30.160 --> 02:35.950
+So it is either dropped or returned to the publisher depending on the message attributes the publisher
+
+02:35.950 --> 02:37.100
+has set.
+
+02:37.150 --> 02:43.510
+So using proper and correct publishing arguments with their message your consumer will not be mistaken
+
+02:44.160 --> 02:51.580
+because with that way your messages are being bounced back to you if they are not delivered to the consumer.
+
+02:51.580 --> 02:58.180
+So this is a great way to communicate with consumers and other clients of your messaging system.
+
+02:58.390 --> 03:04.420
+You have to be very careful about configuring rabbit MQ because otherwise your messages might get lost
+
+03:04.420 --> 03:08.810
+in the system and they will not be delivered to your consumers.
+
+03:08.830 --> 03:15.480
+Of course we're going to see lots of examples of configuring rabbit Q cute bindings Xchange and everything.
+
+03:15.550 --> 03:20.470
+So just don't worry about it right now and I'll see you on the next video where we're going to talk
+
+03:20.470 --> 03:25.870
+about rabbit MQ and other MQ solutions as based on the AM cupie.

@@ -1,0 +1,184 @@
+WEBVTT
+
+00:01.080 --> 00:07.830
+All right we have completed installations of rabbit MQ server on our systems both on Windows and Mac
+
+00:07.830 --> 00:11.440
+OS so to do well with Robert M..
+
+00:11.430 --> 00:19.890
+Q And start discovering it will first have to start our rabid enqueue server on our machine to do that.
+
+00:19.920 --> 00:25.720
+Locate the binary installation of rabid MQ and to do that.
+
+00:25.960 --> 00:34.660
+I'll just go to user folder and local and Espen underspin.
+
+00:34.980 --> 00:43.740
+If I do and LS I'll see that my rubidium Q bash scripts are located to start our server.
+
+00:44.030 --> 00:49.110
+I'll say as h rabbit m q server.
+
+00:49.130 --> 00:51.590
+Simple as that so I'll hit enter.
+
+00:54.360 --> 01:01.570
+And our broker is being started and it is complete with 6 additional plugins.
+
+01:02.680 --> 01:11.730
+So to checkout if our manager plug in is also enabled I'll open a new tab and from there I'll say localhost
+
+01:12.370 --> 01:17.930
+and 1 5 6 7 2 as the pork I'll hit enter.
+
+01:18.280 --> 01:24.760
+And here we go our management plug in is also enabled so we can see the management UI dashboard from
+
+01:24.760 --> 01:25.670
+here.
+
+01:25.690 --> 01:27.330
+Simple as that.
+
+01:27.400 --> 01:35.280
+So in case you can't see this page even if you started with your broker all you have to do is type this
+
+01:35.280 --> 01:42.340
+command and I'll show you now the command for doing this is.
+
+01:42.720 --> 01:48.870
+First you have to of course locate the sh scripts of rabbit MQ binary packages.
+
+01:49.110 --> 01:57.270
+To do that you have to go to the user folder local and Espin in there you should see Raben MQ scripts
+
+01:57.300 --> 02:01.820
+and files to enable your plugin for management.
+
+02:02.200 --> 02:11.710
+You have to type SH rabid MQ plug ins and enable management plugin
+
+02:15.360 --> 02:18.650
+that's all in case you don't see the screen.
+
+02:18.690 --> 02:25.650
+Please use this command and I'll share this command in my description so you can just copy and paste
+
+02:25.650 --> 02:29.520
+it so that you can enable your management UI.
+
+02:29.670 --> 02:38.180
+So let's go back to our management UI on management you I to log into our rocker to our rabid MQ server
+
+02:38.780 --> 02:42.420
+we have some defaults and to learn those defaults.
+
+02:42.530 --> 02:48.320
+Let's go back to our instillation page and check out our default user access.
+
+02:48.320 --> 02:54.720
+And as you can see a broker creates a user as guest and with password guest.
+
+02:54.770 --> 03:02.520
+So let's use those and logon to our Ibidem Q and guests.
+
+03:02.540 --> 03:03.450
+Here we go.
+
+03:04.760 --> 03:13.760
+We have all logged into our Rabbitt MQ server as you can see our dashboard is very comprehensive and
+
+03:13.970 --> 03:16.720
+detailed also useful dashboard.
+
+03:17.030 --> 03:22.430
+So let's start by discovering what it has and what it's doing for us.
+
+03:22.430 --> 03:26.650
+First we have our overview page in this overview page.
+
+03:26.720 --> 03:36.380
+We have the queued messages and the message ratios and the currently idle broker sites we have the connections
+
+03:36.380 --> 03:37.270
+listed here.
+
+03:37.340 --> 03:45.980
+Channels exchange queues and if any consumers there they will be displayed right here right below that.
+
+03:46.090 --> 03:49.270
+We have our node which is provided by Robert M..
+
+03:49.270 --> 03:58.210
+Q So when we launch it in there we have the memory usage number of processes and a disk space that we
+
+03:58.210 --> 04:01.450
+have on the top.
+
+04:01.510 --> 04:09.550
+We have the connections tap in the connections that if we had any We will be seeing the active connections
+
+04:09.550 --> 04:14.830
+to our broker either from the consumer or from the publisher.
+
+04:15.190 --> 04:18.290
+And in the next step we have channels.
+
+04:18.580 --> 04:23.210
+These channels are simply the messaging channels provided by rabit him.
+
+04:23.210 --> 04:26.390
+Q And will dig in to that in the later sections.
+
+04:27.340 --> 04:34.410
+In the next step we have exchanges and as you can see as we discussed in our previous lectures these
+
+04:34.410 --> 04:37.040
+are difficult exchanges from Rabbitt them.
+
+04:37.050 --> 04:45.390
+Q provided to us so that we can by default in it all kind of topics and exchanges as you can see we
+
+04:45.390 --> 04:49.410
+have Amcu P default as a direct type of exchange.
+
+04:49.530 --> 04:51.620
+We have an Kopete direct.
+
+04:51.720 --> 04:53.700
+We have an Cupie fan out.
+
+04:53.700 --> 05:02.310
+We have headers and all those different types of exchange provided for us and in the Two-Step you will
+
+05:02.310 --> 05:06.140
+be seeing all the cues that we have created for us.
+
+05:06.300 --> 05:07.490
+But since there are none.
+
+05:07.490 --> 05:17.460
+For now we're not assuming anything and it says no Qs and in the admin section we can manage users will
+
+05:17.480 --> 05:21.260
+house limits and clustering mechanisms of rabbit.
+
+05:21.270 --> 05:30.080
+Q You can't simply just create users and as you can see here at a user and you can define the management
+
+05:30.080 --> 05:36.770
+type of the user as admin monitoring and other things that we can see here.
+
+05:36.770 --> 05:42.320
+Also you can manage policies for queuing and message broker limits.
+
+05:42.320 --> 05:46.550
+And again clustering.
+
+05:46.600 --> 05:52.720
+So this is the general look of rabbit MQ management plug in and we're going to be making use of it very
+
+05:52.720 --> 05:54.370
+much in our lectures.

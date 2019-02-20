@@ -1,0 +1,184 @@
+WEBVTT
+
+00:03.060 --> 00:12.320
+Know we know how to deliver simple text messages to rabid MQ What about binary messages or object messages
+
+00:13.160 --> 00:16.380
+how they are delivered and how they are received by them.
+
+00:16.390 --> 00:26.460
+Q To test it out and see how that happens let's just create a simple message object to do that.
+
+00:26.540 --> 00:35.250
+I'm going to hit now and Joe a class and from there I'm saying simple message.
+
+00:35.330 --> 00:36.670
+All right.
+
+00:36.890 --> 00:45.700
+In our simple message I'm going to say this object is going to have of course a name.
+
+00:45.860 --> 00:49.780
+And and of course a description.
+
+00:49.900 --> 00:51.160
+Right.
+
+00:54.260 --> 00:55.200
+Just like that.
+
+00:56.250 --> 01:08.070
+And to generate everything I need for my object I'm going to hit control and end and I'm going to need
+
+01:08.340 --> 01:12.390
+getters and setters for these name and description objects.
+
+01:12.390 --> 01:13.740
+Here we go.
+
+01:14.610 --> 01:22.540
+So I'm going to also have a empty constructor for my object and I'll hit select none.
+
+01:22.560 --> 01:23.860
+Here we go.
+
+01:24.210 --> 01:31.140
+We have our simple message object written to be delivered to it in queue to send it to our queue and
+
+01:31.170 --> 01:32.170
+Xchange.
+
+01:32.250 --> 01:39.360
+I'm going to go back to our main class and from there I'm going to create a new simple message object
+
+01:40.470 --> 01:52.220
+and I'm going to create a simple message and for the properties I'm going to set the name as first message.
+
+01:56.180 --> 02:07.330
+And for the description I'm going to say simple description.
+
+02:07.370 --> 02:08.130
+Here we go.
+
+02:09.900 --> 02:14.430
+So let's now send our simple message to rabbet in queue.
+
+02:14.910 --> 02:22.540
+To do that I'm simply going to replace our Hello text and I'm going to say simple message.
+
+02:22.590 --> 02:23.380
+Here we go.
+
+02:24.440 --> 02:32.420
+As you can remember from our Colewort and sent constructor it is expecting an object so that allows
+
+02:32.420 --> 02:40.220
+us to send any kind of object to rabid MQ that three year on our application and see what's going to
+
+02:40.220 --> 02:40.780
+happen.
+
+02:43.710 --> 02:49.910
+Her application as a starting up and here we go.
+
+02:50.090 --> 02:58.100
+Our message is being sent to rabid Q as we can see here it created a new connection to our broker.
+
+02:58.370 --> 03:08.300
+So let's switch back to our rapid Q dashboard and from there let's go back to overview for a moment.
+
+03:08.580 --> 03:15.690
+And as you can see we have our spike again and the messages that are ready and waiting in our queue
+
+03:15.930 --> 03:23.930
+is now too because the previous message that we delivered in our previous video is still there.
+
+03:24.060 --> 03:28.710
+And we also published an object this time as the simple message.
+
+03:28.860 --> 03:30.900
+So it is there too.
+
+03:30.960 --> 03:38.990
+So let's go to our Q and see what happened with our message so that we can see it.
+
+03:39.220 --> 03:43.210
+And as you can see we have a total of two messages in our router.
+
+03:43.210 --> 03:52.330
+Q And if we try to get our messages and of course this time we have two messages in our queue.
+
+03:52.400 --> 03:58.110
+So I'm going to say two messages that I'm going to receive and get messages again.
+
+03:58.640 --> 04:07.330
+And when we hit it we how are hello from code message that we just sent earlier and our new message.
+
+04:07.430 --> 04:12.760
+And as you note that our new message is cannot be seen by rabit name.
+
+04:12.760 --> 04:21.710
+Q That's only because it's a binary message so rabid MQ doesn't automatically know how to serialize
+
+04:21.710 --> 04:25.440
+the object and it cannot display anything right here.
+
+04:25.490 --> 04:33.980
+As you can see we have no payload because the encoding as presented as string it is simply because we
+
+04:33.980 --> 04:39.000
+didn't define any serialization method for our simple message object.
+
+04:39.050 --> 04:49.640
+So to fix that let's go back to our ID and from there let's implement Serializable for our simple message
+
+04:49.640 --> 04:52.860
+object.
+
+04:53.290 --> 04:55.940
+Here we go.
+
+04:56.010 --> 05:01.810
+Now let's just rerun our application and have it delivered to our queue again.
+
+05:04.140 --> 05:06.290
+Our application is about to start now.
+
+05:09.550 --> 05:11.380
+And here we go.
+
+05:11.450 --> 05:22.110
+Let's go back to our dashboard and now if we tried to get three messages and hit get messages.
+
+05:22.750 --> 05:27.300
+We're going to see our payload just like that.
+
+05:27.460 --> 05:36.040
+It says Joe a serialised object that is only because again this is a binary object and rabbit MQ doesn't
+
+05:36.040 --> 05:42.040
+automatically know how to understand this message because at the end this message is going to be delivered
+
+05:42.100 --> 05:46.360
+to some other receiver some other consumer of this message.
+
+05:46.360 --> 05:54.340
+So rubbered MQ doesn't care about the actual content of the message it just knows how to transfer and
+
+05:54.340 --> 05:58.530
+transmit the message to the consumers and subscribers.
+
+05:59.290 --> 06:02.260
+But again we can see that people are right here.
+
+06:02.710 --> 06:12.130
+It is a binary object sent by our job application so sending binary objects are simple as that.
+
+06:12.450 --> 06:20.580
+With this way you can simply wrap any kind of object such as like sound files with files or simply anything.
+
+06:20.790 --> 06:27.240
+And you can just send them out with the object notation a rabbit named Q Just like we did within our
+
+06:27.270 --> 06:28.200
+code right here.

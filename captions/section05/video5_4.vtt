@@ -1,0 +1,64 @@
+WEBVTT
+
+00:01.340 --> 00:08.300
+So we're getting used to using the exchange builder to build builder way of creating exchanges.
+
+00:09.300 --> 00:16.560
+To implement a more advanced topic Exchange let's use the builder method and see what we can do with
+
+00:16.560 --> 00:17.580
+it.
+
+00:17.640 --> 00:21.170
+So I'll go down and I'll create a bean.
+
+00:21.450 --> 00:35.600
+And again I'll say I want an exchange and that exchange is going to be a new exchange and insight the
+
+00:35.870 --> 00:48.840
+Xchange builder I'll say Xchange builder The Opt. topic Exchange and the name of my Xchange is my going
+
+00:48.840 --> 00:50.370
+to be topic
+
+00:53.810 --> 00:54.950
+testy exchange
+
+00:59.120 --> 01:12.500
+and then I can provide again internal all delete durability delayed creation of my Xchange ignore declaration
+
+01:12.500 --> 01:21.940
+exceptions and with some arguments again and with a map of arguments as an option.
+
+01:23.380 --> 01:34.390
+So for my Xchange I can definitely say I want an auto delete Xchange and as the durability I can provide
+
+01:35.860 --> 01:47.560
+true as my durability and I can say internal and I can even provide some arguments for my topic exchange
+
+01:47.560 --> 01:55.070
+builder but this time I'm simply going to build it and let's see what's going to happen.
+
+01:57.120 --> 01:58.620
+Let's read on our application
+
+02:02.230 --> 02:06.710
+or application starting up.
+
+02:06.900 --> 02:08.320
+And here we go.
+
+02:09.560 --> 02:18.070
+Let's take all the logs and we should see that our topic exchange is created in rabit him.
+
+02:18.080 --> 02:29.850
+Q Let's go back to dashboard and from there we should see that our test topic exchange is created as
+
+02:29.850 --> 02:40.770
+you can see here and if we go inside it it is durable set as auto delete and internal is also true just
+
+02:40.770 --> 02:46.030
+like that topic exchange creation with the builder method.
+
+02:46.500 --> 02:47.900
+As simple as that.

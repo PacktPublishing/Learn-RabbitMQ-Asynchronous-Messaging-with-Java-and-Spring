@@ -1,0 +1,52 @@
+WEBVTT
+
+00:01.040 --> 00:09.260
+Let's take a look at what we're going to cover in the section in this section using Jowa and spring
+
+00:09.260 --> 00:18.320
+of course we will learn how to configure Qs with actual code not from any dashboard or rabbit.
+
+00:18.320 --> 00:30.340
+MQ Seelye and then we'll learn how to configure topic fan out direct or header's exchanges from actual
+
+00:30.340 --> 00:31.400
+code again.
+
+00:31.630 --> 00:41.650
+We will learn how to implement those with beans and other types and after that we're going to configure
+
+00:41.860 --> 00:45.020
+bindings between queues and exchanges.
+
+00:47.010 --> 00:49.920
+And learn how to do with actual code again.
+
+00:51.150 --> 00:57.400
+This is a really crucial part for routing keys and topic exchanges.
+
+00:57.390 --> 01:02.850
+And so we have to learn how to bind our cues and exchanges from code.
+
+01:03.300 --> 01:09.240
+Because again we may not have access to our dashboard anytime we want.
+
+01:09.360 --> 01:14.060
+So we should know how to configure them.
+
+01:14.100 --> 01:22.620
+After that we're going to realize an asynchronous communication scenario using two different applications.
+
+01:22.620 --> 01:29.590
+Remember the application that we first used as sending messages to exchanges and queues.
+
+01:29.670 --> 01:32.470
+When we first started developing applications.
+
+01:32.760 --> 01:40.790
+So we're going to use that application to send a message to an exchange indirectly to a Q of course
+
+01:41.100 --> 01:47.870
+and then we're going to be listening to that message as synchronously from another application.
+
+01:49.830 --> 01:54.330
+So it's going to be really fun and I'll be seeing you on the next video.

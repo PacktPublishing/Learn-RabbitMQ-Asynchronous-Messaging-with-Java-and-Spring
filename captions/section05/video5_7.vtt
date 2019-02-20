@@ -1,0 +1,181 @@
+WEBVTT
+
+00:02.860 --> 00:08.960
+We now know how to create cues and different types of exchanges individually.
+
+00:09.100 --> 00:17.740
+But how about binding them with routing keys and to be communicated instantly when we run our application
+
+00:18.280 --> 00:21.040
+from the Xchange to dequeue.
+
+00:21.220 --> 00:24.730
+How about programmatically binding them.
+
+00:25.000 --> 00:33.550
+So to do that I'm going to use my existing cue which is my cue and I'm going to create an exchange called
+
+00:33.760 --> 00:39.730
+my exchange and then I'm going to simply bind them programmatically.
+
+00:39.730 --> 00:45.290
+So let's start by creating our Xchange again.
+
+00:45.440 --> 00:51.510
+I'm creating a bean and I want an exchange.
+
+00:51.540 --> 00:59.900
+I'll say my Exchange.
+
+01:00.350 --> 01:06.690
+And within that exchange I'm simply going to use the builder method.
+
+01:08.230 --> 01:09.420
+Exchange builder.
+
+01:09.760 --> 01:23.130
+And this is going to be a topic exchange and I'll say my exchange and I can say it is my topic exchange
+
+01:23.370 --> 01:26.340
+to be much more clear about my intention
+
+01:28.930 --> 01:40.120
+and then I'm going to say it's going to be durable and I'm simply going to build it just like that.
+
+01:40.140 --> 01:43.600
+So now we how are Xchange defined.
+
+01:43.890 --> 01:49.060
+So let's learn how to bind these Xchange and cute together.
+
+01:50.840 --> 01:55.770
+For that purpose I'm again going to create a bean.
+
+01:56.600 --> 02:02.200
+And in this scenario we again have two ways to do this.
+
+02:02.220 --> 02:09.360
+The first way is the traditional way of creating the binding as a being both
+
+02:13.580 --> 02:25.870
+in this way we can just simply create a new binding instance just like this as the new binding from
+
+02:26.090 --> 02:27.500
+AM Cupie core.
+
+02:27.640 --> 02:36.940
+And inside the arguments we can provide the destination Kewney destination Xchange name with routing
+
+02:36.940 --> 02:37.370
+key.
+
+02:37.390 --> 02:40.330
+And as the additional arguments.
+
+02:40.360 --> 02:50.530
+So for these Xchange and queues the way that we can do this is just like this for a queue name we can
+
+02:50.530 --> 02:59.360
+say my queue and the destination type is of course a queue.
+
+02:59.490 --> 03:11.630
+We're binding to that queue and for the Xchange we're going to say it is my topic exchange.
+
+03:11.720 --> 03:23.720
+Of course we have to provide it as a string and then we have to provide the routing key as the constructors
+
+03:23.730 --> 03:30.340
+suggest us and I'm going to say topic simple as that.
+
+03:30.490 --> 03:37.790
+And for the arguments I'm not going to provide anything right now so I can just give it no.
+
+03:37.800 --> 03:46.680
+So this is the traditional and maybe simpler way of creating a binding but there is of course another
+
+03:46.920 --> 03:54.510
+much more declarative and much more fluent way of creating bindings which is of course from the binding
+
+03:54.510 --> 03:55.380
+builder.
+
+03:55.800 --> 04:04.830
+So let's just comment this out for a moment and create a binding builder and you'll see how easy it
+
+04:04.830 --> 04:08.410
+is to build bindings with the binding builder.
+
+04:08.790 --> 04:17.580
+So I'm going to return a binding Buehler and I'm going to say bind and I'm going to provide dequeue
+
+04:17.590 --> 04:27.620
+which is my cue and I'll say to Xchange which is a topic exchange of course.
+
+04:27.670 --> 04:39.750
+So I'll say my Xchange and then I can provide the routing key and even I can provide enumerated lists
+
+04:39.820 --> 04:41.560
+of riding keys.
+
+04:41.560 --> 04:51.900
+So for my purpose I'm going to say topic and then I can provide a map of arguments.
+
+04:51.940 --> 04:56.990
+Anything else and I'll say no Ark's maybe.
+
+04:57.540 --> 04:59.080
+And that's it.
+
+04:59.590 --> 05:05.570
+We How are binding bills with a word declarator way.
+
+05:05.580 --> 05:11.750
+So now let's test out this binding and see if it is created from the rabbit.
+
+05:11.770 --> 05:12.990
+MQ dashboard.
+
+05:13.140 --> 05:16.280
+And of course to do that let's just rerun our application
+
+05:22.680 --> 05:24.230
+Our application is starting up
+
+05:27.990 --> 05:30.350
+and here we go.
+
+05:30.530 --> 05:37.430
+Let's go back to our dashboard for Adam queue and see if our binding is created.
+
+05:37.430 --> 05:46.550
+So again if we remembered the names we have to be seeing my queue my topic exchange with a binding with
+
+05:46.550 --> 05:48.370
+the routing key topic.
+
+05:48.830 --> 05:55.340
+So let's go back and are my topic exchange is right there.
+
+05:55.490 --> 06:03.500
+If we go inside it and we can see that under the binding section we have a binding to my queue with
+
+06:03.500 --> 06:05.900
+the routing key topic.
+
+06:05.980 --> 06:07.680
+Simple as that.
+
+06:07.780 --> 06:13.210
+And if we click on my queue we can see the same binding.
+
+06:13.410 --> 06:22.050
+From that perspective as a binding to my topic exchange with defrauding routing key topic just like
+
+06:22.050 --> 06:23.150
+that.
+
+06:23.280 --> 06:32.460
+So creating bindings between queues and exchanges are simple as that with a simple binding builder we
+
+06:32.460 --> 06:37.160
+can create any binding within any queue from any exchange.

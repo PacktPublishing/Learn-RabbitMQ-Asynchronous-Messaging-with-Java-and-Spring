@@ -1,0 +1,217 @@
+WEBVTT
+
+00:04.240 --> 00:11.370
+Now let's talk about the original point of our Choros which is AM Cupie and what it solves.
+
+00:12.490 --> 00:20.970
+So as we learned earlier MPP is an advanced message Kroon protocol it's reliable and interoperable.
+
+00:20.970 --> 00:25.220
+The solutions coming out of different vendors just simply work well.
+
+00:25.240 --> 00:27.670
+Other products also failed.
+
+00:27.700 --> 00:36.800
+It is highly standardized it is providing a wide range of features and we have lots of use cases but
+
+00:36.820 --> 00:38.890
+of course we all know that.
+
+00:39.280 --> 00:44.630
+And of course there is much more to it than these with AM Cupie.
+
+00:44.800 --> 00:52.130
+So lets take an example and see where the benefits of keeping comes from.
+
+00:52.230 --> 00:57.930
+So let's suppose we want completely different systems to exchange messages.
+
+00:57.930 --> 01:03.330
+So we have a Wender a with Jowa application.
+
+01:03.660 --> 01:07.850
+Then we have a Wender be with a dot Net application.
+
+01:08.010 --> 01:16.320
+And in the middle of those two we have the Wender C with the M Q Cupie 1.0 broker.
+
+01:16.650 --> 01:22.990
+So we want to communicate these two vendors and we're going to use Wender C which is the AM.
+
+01:23.060 --> 01:32.760
+Q broker to do that render a publisher is the message from its job application to AM Cupie broker and
+
+01:32.760 --> 01:34.830
+then Wender be Weathertop.
+
+01:34.850 --> 01:41.720
+Now the application receives the message from the AM Cupie broker in the middle from the under-sea.
+
+01:41.940 --> 01:47.500
+And as you can see these are all three different vendors with different capabilities.
+
+01:47.520 --> 01:54.450
+One is using a job application to publish its message and the other one is using a dot Net application
+
+01:54.750 --> 01:56.870
+to receive the message.
+
+01:56.870 --> 02:04.090
+And in the middle of that we have a broker which is the standard within the communication channel.
+
+02:04.280 --> 02:10.930
+So are underway and when we can communicate flawlessly with the broker in the middle of them it will
+
+02:10.930 --> 02:18.410
+be a job application Dattner application or any other application that you can think of with the proper
+
+02:18.410 --> 02:20.300
+and Cupie implementation.
+
+02:20.360 --> 02:26.400
+You can just communicate through different platforms and services with the help of AM Cupie.
+
+02:26.510 --> 02:27.570
+Simple as that.
+
+02:29.800 --> 02:36.100
+So for Amcu side let's talk a little bit about the other features of it.
+
+02:36.610 --> 02:45.340
+So am Cupie makes the difficult become practical as we saw with the previous example you can just communicate
+
+02:45.340 --> 02:53.410
+with different platforms and applications and services you dont have to rely on a single system or single
+
+02:53.410 --> 02:55.930
+application or a single language.
+
+02:55.930 --> 02:58.840
+You might have a jello based implementation.
+
+02:58.840 --> 03:06.090
+Talking to other applications and you dont have to know what the other application is implementing.
+
+03:06.100 --> 03:12.020
+You just have to care about the message and the content of the message that you're going to deliver.
+
+03:14.390 --> 03:20.000
+All amp Cupie clients enter operate with all and keep the servers.
+
+03:20.030 --> 03:24.730
+This is what it was the point of our example in the previous slide.
+
+03:24.740 --> 03:31.430
+So as you can remember job application was talking to a Dattner application behind the scenes that was
+
+03:31.430 --> 03:40.120
+with the help of the AM Cupie broker diverse programming languages can communicate easily.
+
+03:40.120 --> 03:43.390
+This is the same thing with our example again.
+
+03:44.910 --> 03:51.500
+Legacy message brokers can be retrofitted to remove proprietary protocols from the networks.
+
+03:51.600 --> 03:59.550
+So what this means is that when you implement Cupie you can just get rid of the legacy protocols from
+
+03:59.550 --> 04:04.170
+your system because of its advanced technologies behind the scenes.
+
+04:04.170 --> 04:12.870
+Amcu allows you to communicate instantly and in a modern fashion so you won't have to depend on those
+
+04:12.930 --> 04:19.710
+unreliable technologies anymore you just have to implement your client for the AM Cupie application
+
+04:20.040 --> 04:23.600
+and with an Cupie Brooke we're in the middle of everything.
+
+04:23.820 --> 04:34.330
+You can just communicate with any client and Cupie is also a WHERE clause friendly platform and protocol.
+
+04:34.670 --> 04:37.680
+It enables messaging as a cloud service.
+
+04:37.730 --> 04:45.230
+So you simply want your Amcu people will Kura into the cloud and then you can just simply start publishing
+
+04:45.230 --> 04:54.000
+and subscribing to those messages that you send and again publish and subscribe is one of the key features
+
+04:54.000 --> 04:59.370
+of AM Cupie with the advanced features of publish and subscribe and copy.
+
+04:59.520 --> 05:07.750
+You can simply use it as a publisher and subscribe client but with of course advanced features with
+
+05:07.750 --> 05:15.060
+them Cupie you can define your messaging exchange as transactions with transaction messaging.
+
+05:15.340 --> 05:20.090
+You can define fail over and or try mechanisms for your messages.
+
+05:20.620 --> 05:26.830
+But that's not all of course with the transactional way of messaging you can provide a much more reliable
+
+05:26.830 --> 05:28.860
+way of communication.
+
+05:28.870 --> 05:36.550
+So let's talk about some of the use cases for AM Cupie do you want a real time feed of constantly updating
+
+05:36.550 --> 05:37.560
+information.
+
+05:37.600 --> 05:45.490
+That's no problem for AM Cupie do you want an encrypted assured transaction which is highly safe and
+
+05:45.760 --> 05:47.250
+highly secured.
+
+05:47.260 --> 05:48.900
+Then there is no issue with.
+
+05:48.910 --> 05:55.600
+4 a.m. Cupie So you want your messages to be delivered when the destination becomes on line but not
+
+05:55.600 --> 05:57.320
+the other way around.
+
+05:57.370 --> 05:58.170
+No problem.
+
+05:59.480 --> 06:06.120
+You want to send an enormous message while still receiving status updates or to the same network connection.
+
+06:06.170 --> 06:13.410
+There's no problem with them Cupie do you want things to work on all popular operating systems and languages
+
+06:13.890 --> 06:22.340
+just like we saw with our example there is no problem for that with an Cupie am Cupie basically solves
+
+06:22.360 --> 06:27.820
+the technical part of connecting diverse applications and systems all together.
+
+06:28.150 --> 06:34.780
+So you don't have to worry about the technical underlinings of the message delivery and transactions
+
+06:36.370 --> 06:43.000
+all that is left for you to do is to focus on high Reiley over reacting to those information flows coming
+
+06:43.000 --> 06:45.240
+out of your brokers and applications.
+
+06:46.370 --> 06:52.320
+So these are the key aspects and key takeaways from AMD keep P.
+
+06:52.640 --> 06:58.230
+We're of course going to see lots of things in action with the implementation of Robitaille.
+
+06:58.230 --> 06:59.080
+Q Okay.
+
+06:59.120 --> 06:59.930
+And keep cupie.

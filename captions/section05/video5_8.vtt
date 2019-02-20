@@ -1,0 +1,145 @@
+WEBVTT
+
+00:02.090 --> 00:09.770
+Know it's time to test the scenario and see if our configuration as proper and working as expected.
+
+00:10.740 --> 00:18.060
+In this scenario we're going to be publishing a message from an application and from another application
+
+00:18.660 --> 00:22.670
+we're expecting to catch a message with our listener.
+
+00:23.780 --> 00:32.270
+So for that purpose I'm going to be using our first application that we developed earlier in our course.
+
+00:32.270 --> 00:36.710
+So which is simply the rabbit MQ demo.
+
+00:36.920 --> 00:41.900
+If I go there we have a rabbit template as you can remember.
+
+00:42.080 --> 00:51.180
+And when our application starts up we are simply publishing our message with rabbit template.
+
+00:51.430 --> 01:00.100
+So for the purpose of this demo I'm going to be publishing a message to my topic exchange with the routing
+
+01:00.100 --> 01:10.100
+key topic just like we did with the previous example and if I go back there I'm going to be publishing
+
+01:10.100 --> 01:17.120
+a message to my topic Exchange and with the Rawling key as topic.
+
+01:17.360 --> 01:28.030
+My message is going to be routed to my Q And since I have a listener for my Q sat right here with a
+
+01:28.040 --> 01:36.750
+message listener container I'll be able to catch a message with this rabbit MQ message listener.
+
+01:36.820 --> 01:46.060
+So all I need to do is I need to provide my topic exchange and my routing and then dressed is going
+
+01:46.060 --> 01:50.460
+to be handled by a rabid MQ with the binding to are my cue.
+
+01:50.470 --> 01:59.200
+My message is going to be put in my queue and then I'll be able to read it inside my logs right here.
+
+01:59.380 --> 02:08.610
+So let's switch back to our rabbit MQ demo and before that lets just copy the Xchange tame and open
+
+02:08.610 --> 02:14.000
+our rabbit and demo and in Arabic the MQ demo.
+
+02:14.550 --> 02:23.600
+Let's just provide the Xchange name and copy and paste it and trouting key of course going to be topic.
+
+02:23.640 --> 02:33.480
+So with that way my message can be put inside my queue and we're again sending the simple message object
+
+02:34.390 --> 02:43.410
+but lets us go inside a simple message object and see if it has a two string method and it doesn't have
+
+02:43.570 --> 02:47.370
+an end if you can remember from our previous lectures.
+
+02:47.450 --> 02:55.320
+Rabbit rabid MQ is simply treating any thing as an object and that mechanism doesn't allow us to read
+
+02:55.530 --> 02:58.280
+any message right out of the box.
+
+02:58.380 --> 03:06.870
+So we have to be casting our messages to a string but for the string to work we have to be having an
+
+03:06.880 --> 03:08.600
+implementation of string.
+
+03:09.090 --> 03:19.490
+So for our simple message object let's implement to string method and I'm going to say to string and
+
+03:19.770 --> 03:24.730
+all have a name and description and just like that.
+
+03:24.740 --> 03:31.390
+So from our list of the object we have to receiving this message.
+
+03:31.490 --> 03:41.300
+So let's go back to our main class and we have everything ready so we have my topic exchange topic and
+
+03:41.510 --> 03:54.160
+simple message as our message body let's know run our application and see what's going to happen.
+
+03:54.350 --> 04:04.630
+Our application is starting up and our message appears to be sent to our exchange.
+
+04:04.750 --> 04:09.930
+Let's go to rabbit and MQ dash board and see what's happened there.
+
+04:10.320 --> 04:14.040
+And as you can see there is a spike in my queue.
+
+04:14.170 --> 04:17.810
+So that means our message is delivered to my queue.
+
+04:18.040 --> 04:26.410
+And if you check out the numbers with the ready on ACT and total You don't have any messages waiting
+
+04:26.410 --> 04:27.640
+inside our queue.
+
+04:27.670 --> 04:34.070
+So that means our message is being processed already by an application or a listener.
+
+04:34.150 --> 04:38.490
+So that should be our rabbit Killisnoo or application.
+
+04:38.720 --> 04:45.180
+And if we again try to get the messages from our queue the queue is empty.
+
+04:45.380 --> 04:55.270
+So let's go to our listener application and we should be seeing our message in the logs.
+
+04:55.500 --> 04:57.100
+And here we go.
+
+04:57.950 --> 05:03.780
+Our message is being delivered to Robert M. Kulas and or application.
+
+05:03.890 --> 05:12.140
+So we just realized a asynchronous communication scenario using two different applications and topics
+
+05:12.650 --> 05:14.480
+exchanges and bindings.
+
+05:14.480 --> 05:23.960
+So we could exchange messages between totally different applications with the scenario you can think
+
+05:23.960 --> 05:31.260
+of any example any scenario in your mind and you can just realize it with these configurations with
+
+05:31.280 --> 05:31.950
+rabbit them.
+
+05:31.950 --> 05:32.170
+Q.
